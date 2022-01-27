@@ -9,11 +9,10 @@ Open terminal, make sure your operating system is up to date:
 
 ```sudo apt upgrade```
 
-Do you have python3?
+Do you have python3? In order for CrossCompute to work properly you must have atleats Python3 version 3.9.0 and up.
 
 ```python3 --version```
-
-```Python 3.8.10```
+```Python 3.9.1```
 
 Do you have pip?
 
