@@ -9,9 +9,9 @@ You have an idea.  You get your pen and your paper to take down that idea and pu
 
 ![Create a virtual environment for crosscompute automation](gifs/01-Create-venv-automation.gif)[](gifs/01-Create-venv-automation.gif)
 
-![Create a virtual environment for crosscompute automation](gifs/02-Check-pip-list-in-venv.gif)[](gifs/02-Check-pip-list-in-venv.gif)
+![Checking virtual environment's pip list](gifs/02-Check-pip-list-in-venv.gif)[](gifs/02-Check-pip-list-in-venv.gif)
 
-![Create a virtual environment for crosscompute automation](gifs/03-installing-latest-version-of.gif)[](gifs/03-installing-latest-version-of.gif)
+![Installing latest version of crosscompute framework](gifs/03-installing-latest-version-of.gif)[](gifs/03-installing-latest-version-of.gif)
 
 ### What is venv? So what? How to make one?
 
