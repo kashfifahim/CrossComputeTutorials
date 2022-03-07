@@ -1,9 +1,12 @@
 # Title of Tutorial
 
-You have an idea.  You get your pen and your paper to take down that idea and put it on paper.  You then take your idea on paper, you head to your machine. At your machine, you work line after line, funtions after functions, tests after tests, that idea from your head, to your paper, is now on your machine. You run your code. You solve a problem. The program But now your tool just sits on your machine, it waits for you to run it, it waits for you to give it some inputs, it waits to solve a problem and return to the world the solution. 
+<!-- You have an idea.  You get your pen and your paper to take down that idea and put it on paper.  You then take your idea on paper, you head to your machine. At your machine, you work line after line, funtions after functions, tests after tests, that idea from your head, to your paper, is now on your machine. You run your code. You solve a problem. The program But now your tool just sits on your machine, it waits for you to run it, it waits for you to give it some inputs, it waits to solve a problem and return to the world the solution.  -->
 
 
 ## Section 1: Introduction to the simulation
+
+Your company has taken on a new lucrative project.  The stakeholders want to implement a bikes sharing system between the campus of Wellesley College and the campus of Olin College of Engineering. In the following days, you and your team discuss and gather the requirements.  Then together you discuss and map out the user stories, before finally having a minimum viable product in the form of a simulation. With some creative programming, your team's simulation can depict in a graph the likelihood of a customer arriving to an available bike, wait for a bike, or not use the system.
+
 
 ## Section 2: Setting up your vevn
 
