@@ -31,7 +31,29 @@ Up to this point we have a script holding all the functions for running the simu
 
 In the previous section we inspected the source code for the simulation.  From our inspection, we were able to identify the key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. This new script imports all the functions from the simulation source code and at the same time provides us the space to write code to the simulation's interface and not to its implementation.
 
-In this section we take the first step towards using the CrossCompute Automation framework: configuring our ```automate.yml``` file.
+In this section we take the first step towards using the CrossCompute Automation framework: configuring our ```automate.yml``` file. 
+
+For many new to automation you might be asking, "what is a .yml file?"  A ```.yml``` file extension refers to a ```YAML``` file.  A YAML is a human-readable data format. If you are familiar with other data formats, such as ```JSON``` or ```XML```, ```YAML``` functions much in the same way but is easeir to read and write.  If this is your first time learning of ```YAML```, no worries, as you begin to use automation tools, like our CrossCompute Automation Framewrk, you will discover more and more tools that are using ```YAML``` for their automation workflow.  With this in mind, let's start configuring our ```automate.yml``` file for the CrossCompute Automation Framwork.
+
+Let's start by creating a new file and then saving it as ```automate.yml```. 
+
+Next, let us enter some metadata for our automation.  
+
+Now, let us define the inputs.
+
+After configuring the inputs, let's configure our outputs.
+
+The next section we must configure for our automation is the ```batches``` section.
+
+Finally, let's configure our ```script``` section.  
+
+Before going any further, let's activate the virtual environment which has the CrossCompute package installed.  With that environment activated, let's run ```crosscompute``` together with our ```autoamte.yml``` file. 
+
+What should you see? In the terminal you should see the local address where your automation is being served.  
+
+You should also see, in the project directory, a new folder called batches.  We need to go into that directory, and there you should see another folder called ```input```. Let's go into that folder and create a new file called ```variables.dictionary```.
+
+
 
 
 
