@@ -27,16 +27,6 @@ Within ```run.py``` we will import all the functions from the simulation script.
 Great, everything is working. 
 
 Up to this point we have a script holding all the functions for running the simulation.  We also developed an understanding of what the inputs and output are for the simualation.  In the next section, we will start configuring our simulation with the latet version of the CrossCompute Automation Framework.
-
-## Section 2: Setting up your vevn
-
-![Create a virtual environment for crosscompute automation](gifs/01-Create-venv-automation.gif)[](gifs/01-Create-venv-automation.gif)
-
-![Checking virtual environment's pip list](gifs/02-Check-pip-list-in-venv.gif)[](gifs/02-Check-pip-list-in-venv.gif)
-
-![Installing latest version of crosscompute framework](gifs/03-installing-latest-version-of.gif)[](gifs/03-installing-latest-version-of.gif)
-
-
 ## Configuring the automate.yml file
 
 In the previous section we inspected the source code for the simulation.  From our inspection, we were able to identify the key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. This new script imports all the functions from the simulation source code and at the same time provides us the space to write code to the simulation's interface and not to its implementation.
