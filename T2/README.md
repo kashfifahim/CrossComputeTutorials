@@ -36,15 +36,13 @@ Up to this point we have a script holding all the functions for running the simu
 
 ![Installing latest version of crosscompute framework](gifs/03-installing-latest-version-of.gif)[](gifs/03-installing-latest-version-of.gif)
 
-### What is venv? So what? How to make one?
 
-## Section 3: Identifying input and output
+## Configuring the automate.yml file
 
-### Reviewing the modeling script: 
-### What libraries will we need? Set up a setup.sh file to install all the dependencies
-### Once we have our input-output create the data.dictionary file. It's going to store the user input/interactivity
-### Do the same for the outputs
+In the previous section we inspected the source code for the simulation.  From our inspection, we were able to identify the key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. This new script imports all the functions from the simulation source code and at the same time provides us the space to write code to the simulation's interface and not to its implementation.
 
-## Section 4: Configuring the automate.yml file
+In this section we take the first step towards using the CrossCompute Automation framework: configuring our ```automate.yml``` file.
+
+
 
 ## Section 5: crosscompute automate.yml
