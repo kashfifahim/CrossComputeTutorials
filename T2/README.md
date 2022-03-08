@@ -1,7 +1,5 @@
 # Title of Tutorial
-
-<!-- You have an idea.  You get your pen and your paper to take down that idea and put it on paper.  You then take your idea on paper, you head to your machine. At your machine, you work line after line, funtions after functions, tests after tests, that idea from your head, to your paper, is now on your machine. You run your code. You solve a problem. The program But now your tool just sits on your machine, it waits for you to run it, it waits for you to give it some inputs, it waits to solve a problem and return to the world the solution.  -->
-
+## Section 0: Summary -- What you will need, what you will get done by the end of the tutorial, who to reach out if you are having problems
 
 ## Section 1: Introduction to the simulation
 
@@ -12,7 +10,6 @@ In the following days, you and your team discuss and gather the requirements.  T
 Let's git clone the team's simulation program to a local folder on our machine.
 
 ## TO DO: git clone source files
-    
 
 Scrolling through the script we discover that it is mainly made up of function definitions.  What is of interest to us is discovering the interface to the simulation. This way, when we program to the interface, we will not have to concern ourselves with the implementation details of the simulation. All we need to be concerned with is what inputs does the simulation require and what output will it return. This is the common programming principle of programming to the interface, not to the implementation.
 
