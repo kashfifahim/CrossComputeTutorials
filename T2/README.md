@@ -7,14 +7,14 @@
 
 Your company has taken on a new project.  The stakeholders want to implement a bike sharing system between the campus of Wellesley College and the campus of Olin College of Engineering. In the following days, you and your team discuss and gather the requirements.  Then, the team collaborated to map out the user stories. Finally, after some time developing and testing, your team has a minimum viable product in the form of a simulation, written in Python. 
 
-Let's git clone the team's repository to a local folder on our machine. Then let's check out the team's program.  
+Let's git clone the team's simulation program to a local folder on our machine.
 
 The script is filled with lots of function definitions.  What is of interest to us is discovering the interface to the simulation. This way, when we program to the interface, we will not have to concern ourselves with the implementation details of the simulation. All we need to be concerned with is what inputs does the simulation require and what output will it return. This is the common programming principle of programming to the interface, not to the implementation.
 
 
 With an understanding of the interface of the simulation under our belt, let's now create a new Python script and save it as ```run.py```.  
 
-Within ```run.py`` we will import all the functions from the simulation script.  Now, let's take a second to test that our import works by running a test simulation. 
+Within ```run.py``` we will import all the functions from the simulation script.  Now, let's take a second to test that our import works by running a test simulation. 
 
 Great, everything is working. 
 
