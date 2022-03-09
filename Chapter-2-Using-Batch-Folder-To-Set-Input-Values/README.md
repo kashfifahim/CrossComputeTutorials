@@ -114,14 +114,15 @@ Finally, we need to provide ```automate.yml``` a path to where the script can lo
                 view: number
                 path: variables.dictionary
 
-After this, let's also add a ``TO DO`` note to ourselves: 
+We are going to need to complete some follow up tasks. To keep track of those follow up takss let's create a ``TO DO`` note and add the following tasks for ourselves: 
 
     TO DO 
         [] create an input_folder
         [] create a variables.dictionary
         [] declare and assign value to p1, p2, num_steps for first simulation
     
-After configuring the inputs, let's configure our outputs.
+That covers configuring the ```input``` variables.  Next, let's configure the ```output``` variables.
+
 
 ### ```automate.yml``` > batches configuration section
 The next section we must configure for our automation is the ```batches``` section.
