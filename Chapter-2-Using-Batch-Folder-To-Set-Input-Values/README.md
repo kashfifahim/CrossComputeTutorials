@@ -1,7 +1,7 @@
 # Chapter 2: Using Batch Folder to Set Input Values
 ## Section 0: Summary -- What you will need, what you will get done by the end of the tutorial, who to reach out if you are having problems
 
-## Section 1: Introduction to the simulation
+## Introduction to the simulation
 
 Your company has taken on a new project.  The stakeholders want to implement a bike sharing system between the campus of Wellesley College and the campus of Olin College of Engineering. Your team has been tasked with writing a program that simulates this system.  
 
@@ -9,6 +9,7 @@ In the following days, you and your team discuss and gather the requirements.  T
 
 Let's look at the team's simulation program. You can follow along with the code found in the ```src``` folder in the tutorials. [For this next section the code can be found here.](https://github.com/kashfifahim/CrossComputeTutorials/blob/main/src/Chapter-2/bikeshare.py)
 
+### Programming to the Interface, Not the Implementation, ```run.py```
 
 Scrolling through the script we discover that it is mainly made up of function definitions.  What is of interest to us is discovering the interface to the simulation. This way, when we program to the interface, we will not have to concern ourselves with the implementation details of the simulation. All we need to be concerned with is what inputs does the simulation require and what output will it return. This is the common programming principle of programming to the interface, not to the implementation.
 
@@ -17,15 +18,12 @@ Near the end of the program we find the program initializes a ```State``` object
 From our first analysis of the program we found that the simulation needs a ```State``` object initialized to how many bikes the system should have.  Then to run the simulation, the program needs three inputs.  The first pair of inputs, ```p1``` and ```p2``` are floating point numbers between 0.1 and 0.9. The third input, ```num_steps```, is the length of time, in mimutes, the system is simulating.  For example, if the ```num_step = 60```, this means the resulting simulation is one that takes place over sixty-minutes.  
 
 To make our workflow easier, we are going to create a second Python script, in the same folder as the simulation source code, called ```run.py```. We will import all the functions from the simulation source code and run the code necessary to run a simulation successfully. Let us then run ```run.py``` to see all the functions are imported successfully.  Once ```run.py``` runs without error, we are then ready to continue and introduce ```crosscompute``` to the project.
-## TO DO: add comments to the function definitions
 
 With an understanding of the interface of the simulation under our belt, let's now create a new Python script and save it as ```run.py```.  
 
 Within ```run.py``` we will import all the functions from the simulation script.  Now, let's take a second to test that our import works by running a test simulation. 
 
-Great, everything is working. 
-
-Up to this point we have a script holding all the functions for running the simulation.  We also developed an understanding of what the inputs and output are for the simualation.  In the next section, we will start configuring our simulation with the latet version of the CrossCompute Automation Framework.
+Up to this point we have a script holding all the functions for running the simulation.  In addition, we now have a ```run.py``` script that serves as our entry point to the simulation.  We know the arguments that must be passed to the simulation, those arguments will serve as the variables to change in automating the simulation. In the next section, we will start configuring our simulation with the latet version of the CrossCompute Automation Framework.
 ## Configuring the automate.yml file
 
 In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will now imports all the functions from the simulation source code and at the same time provides us the space to write code to the simulation's interface and not to its implementation.
@@ -96,8 +94,4 @@ You should also see, in the project directory, a new folder called batches.  We 
 
 ### ```batches``` > ```input``` > ```variables.dictionary```
 
-
-
-
-
-## Section 5: crosscompute automate.yml
+## ```crosscompute``` ```automate.yml```
