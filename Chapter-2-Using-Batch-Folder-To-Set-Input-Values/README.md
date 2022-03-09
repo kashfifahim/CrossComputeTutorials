@@ -73,7 +73,21 @@ Finally, to wrap up the ```metadata``` section let's add a version number to our
 Next we will configure the input and output configurations.
 
 ### ```automate.yml``` > input configuration and output configuration section
-Now, let us define the inputs.
+Now, let us define the inputs. Earlier when we analyzed the source code of the simulation, ```bikeshare.py``` we took note of the inputs the simulation needed to run.  We noted that we needed 3 variables, ```p1```, ```p2```, and ```num_steps```. Each of these variables would hold a number. Knowing how many variables we would need for input and what kind of data they would help are two key insights for us to configure the ```inputs``` section of our ```automate.yml``` file.  
+
+Let's add the ```input``` configuration to our ```automate.yml```.
+
+    # input configuration
+    input:
+        # input variables
+        variables:
+            - id: p1
+                view: number
+            - id: p2
+                view: number
+            - id: num_steps
+
+
 
 After configuring the inputs, let's configure our outputs.
 
