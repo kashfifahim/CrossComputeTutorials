@@ -98,7 +98,7 @@ Next, we need to tell our ```automate.yml``` file how to render each of these va
             - id: num_steps
                 view: number
 
-Finally, we need to provide ```automate.yml``` a path to where the script can load these variables.  Here we have a lot of choices.  You can use a ```csv```, you can use a ```json```, but for this tutorial we can actually work with a simple ```.dictionary``` file which we will call ```variables.dictionary```. Since each of the variables will be located in the same file, we can now go ahead and assign the ```path``` attribute to each ```id``` and assign the ```variables.dictionary``` to the ```path```.
+Finally, we need to provide ```automate.yml``` a path to where the script can load these variables.  Here we have a lot of choices.  You can use a ```csv```, you can use a ```json```, but for this tutorial we can actually work with a simple ```.dictionary``` file which we will call ```variables.dictionary```. Since each of the variables will be located in the same file, we can now go ahead and assign the ```path``` attribute to each ```id``` and assign the ```variables.dictionary``` to the ```path```. The ```variables.dictionary``` file path will be relative to a folder called ```input_folder``` that we will need to later create.
 
     # input configuration
     input:
@@ -121,9 +121,50 @@ We are going to need to complete some follow up tasks. To keep track of those fo
         [] create a variables.dictionary
         [] declare and assign value to p1, p2, num_steps for first simulation
     
-That covers configuring the ```input``` variables.  Next, let's configure the ```output``` variables.
+That covers configuring the ```input variables``` section of our ```automate.yml``` file.  Next let's configure the ```output variables```.
 
 ### ```automate.yml``` > ```output configuration``` section
+Configuring the ```output``` section is similar to the steps taken when configuring the ```input``` section.  
+
+First let's declare the ```output``` section and underneath declare the ```variables``` section.
+
+    output:
+        variables:
+
+Earlier in our inspection of the simulation source code we noted that there were three input variables, ```p1```, ```p2```, and ```num_steps```. For each set of these ```input variables``` came an output that was a graph saved as an image, ```simulation-graph.png```.  We just need to configure these details into our ```automate.yml``` file. 
+
+First let's give theoutut variable an ```id```. 
+
+    output:
+            variables:
+                - id: simulation_graph
+
+Next, because the variable is going to be rendered and saved as a ```.png``` we need to set ```simulation_graph```'s ```view``` attribute as that of an ```image```.
+
+    output:
+            variables:
+                - id: simulation_graph
+                    view: image
+
+The last detail to configure, just like we did for ```input```, we need to give a path where ```simulation_graph``` output would be found. This path is relative to an ```output_folder``` that we will need to create.
+
+ output:
+            variables:
+                - id: simulation_graph
+                    view: image
+                    path: simulation-graph.png
+
+While that completes our configuration of the ```output``` section of the ```automate.yml``` file, like before with the ```input``` configuration, we are going to need to add some tasks to our running ```TO DO``` list. Luckily, the ```output_variable``` will be the result of the automation. So we just need to create the ```output_folder```.
+
+    TO DO 
+            [] create an input_folder
+            [] create a variables.dictionary
+            [] declare and assign value to p1, p2, num_steps for first simulation
+
+            [] create an output_folder
+
+At this poit, be sure to save your ```automate.yml``` file.  We are now going to move on to configuring the ```batches``` section of our ```automate.yml``` file.
+
 ### ```automate.yml``` > ```batches configuration``` section
 The next section we must configure for our automation is the ```batches``` section.
 
