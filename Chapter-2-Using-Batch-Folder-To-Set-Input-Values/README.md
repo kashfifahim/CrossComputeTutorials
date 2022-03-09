@@ -43,7 +43,37 @@ Let's start by creating a new file and then saving it as ```automate.yml```.
 The ```automate.yml``` file can be filled with many sections. For this tutorial we are going to need to configure four sections. The first section provides the automation with some ```metadata```.  The second section then configures the ```inputs and outputs```. Next, we configure ```the batch section``` where we will tell the script where to find our inputs, datasets, and other options. Finally, we configure ```the scripts``` for running our automation.
 
 
-Next, let us enter some metadata for our automation.  
+Let us get started with configuring our ```automate.yml``` file by filling in the first section: our project's metadata.
+
+First configure the version of ```crosscompute``` you will be using. At the time of writing, ```crosscompute``` is at version ```0.9.1```.  
+
+    ---
+    # version of crosscompute
+    crosscompute: 0.9.1
+
+Next, we are going to gave a name to our automation.
+
+    ---
+    # version of crosscompute
+    crosscompute: 0.9.1
+
+    # name of your automation
+    name: Olin-Wellesly Bikeshare System
+
+Finally, to wrap up the ```metadata``` section let's add a version number to our ```automation```.
+
+    ---
+    # version of crosscompute
+    crosscompute: 0.9.1
+
+    # name of your automation
+    name: Olin-Wellesley Bikeshare System
+
+    # version of your automation
+    version: 0.0.2
+
+That completes the ```metadata``` part of our ```automate.yml``` configuration file.  Next we will configure the input and output configurations.
+
 
 Now, let us define the inputs.
 
