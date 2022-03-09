@@ -124,10 +124,10 @@ We are going to need to complete some follow up tasks. To keep track of those fo
 That covers configuring the ```input``` variables.  Next, let's configure the ```output``` variables.
 
 ### ```automate.yml``` > ```output configuration``` section
-### ```automate.yml``` > batches configuration section
+### ```automate.yml``` > ```batches configuration``` section
 The next section we must configure for our automation is the ```batches``` section.
 
-### ```automate.yml``` > script configuration section
+### ```automate.yml``` > ```script configuration``` section
 Finally, let's configure our ```script``` section.  
 
 With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
