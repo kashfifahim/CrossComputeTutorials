@@ -116,7 +116,7 @@ Finally, we need to provide ```automate.yml``` a path to where the script can lo
 
 After this, let's also add a ``TO DO`` note to ourselves: 
 
-    ```TO DO``` 
+    TO DO 
         [] create an input_folder
         [] create a variables.dictionary
         [] declare and assign value to p1, p2, num_steps for first simulation
