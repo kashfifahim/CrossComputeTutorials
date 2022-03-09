@@ -54,7 +54,7 @@ The next section we must configure for our automation is the ```batches``` secti
 
 Finally, let's configure our ```script``` section.  
 
-With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrouhg on how to set up your virtual environment. 
+With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
 
 With our virtual environment activated, let us go ahead and run ```crosscompute autoamte.yml```. 
 
