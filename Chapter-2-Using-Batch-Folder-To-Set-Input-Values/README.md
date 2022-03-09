@@ -73,9 +73,19 @@ Finally, to wrap up the ```metadata``` section let's add a version number to our
 Next we will configure the input and output configurations.
 
 ### ```automate.yml``` > input configuration and output configuration section
-Now, let us define the inputs. Earlier when we analyzed the source code of the simulation, ```bikeshare.py``` we took note of the inputs the simulation needed to run.  We noted that we needed 3 variables, ```p1```, ```p2```, and ```num_steps```. Each of these variables would hold a number. Knowing how many variables we would need for input and what kind of data they would help are two key insights for us to configure the ```inputs``` section of our ```automate.yml``` file.  
+Now, let us define the inputs. Earlier when we analyzed the source code of the simulation, ```bikeshare.py``` we took note of the inputs the simulation needed to run.  We noted that we needed 3 variables, ```p1```, ```p2```, and ```num_steps```. Let's go ahead and add these three variables to the ```input``` section.
 
-Let's add the ```input``` configuration to our ```automate.yml```.
+First we're going to tell our ```automate.yml``` file that we are now configuring the inputs with ```input:```. Next, after an indent, let's tell the file that we are now configuring the ```variables``` for the ```input``` section with ```variables:```. Since we know we are going to need three variables, we are going to create an ```- id``` for each of the variables and connect those variables to the ```id``` as follows below:
+
+    # input configuration
+    input:
+        # input variables
+        variables:
+            - id: p1
+            - id: p2
+            - id: num_steps
+
+Next, we need to tell our ```automate.yml``` file how to render each of these variables.  Wwe know each variables, ```p1```, ```p2```, ```num_steps``` are going to be holding numbers, so we are going to add a ```view``` attribute to each of the ```id``` and set them to ```number```.
 
     # input configuration
     input:
@@ -87,6 +97,22 @@ Let's add the ```input``` configuration to our ```automate.yml```.
                 view: number
             - id: num_steps
                 view: number
+
+Finally, we need to provide ```automate.yml``` a path to where the script can load these variables.  Here we have a lot of choices.  You can use a ```csv```, you can use a ```json```, but for this tutorial we can actually work with a simple ```.dictionary``` file which we will call ```variables.dictionary```. Since each of the variables will be located in the same file, we can now go ahead and assign the ```path``` attribute to each ```id``` and assign the ```variables.dictionary``` to the ```path```.
+
+    # input configuration
+    input:
+        # input variables
+        variables:
+            - id: p1
+                view: number
+                path: variables.dictionary
+            - id: p2
+                view: number
+                path: variables.dictionary
+            - id: num_steps
+                view: number
+                path: variables.dictionary
 
 
 After configuring the inputs, let's configure our outputs.
