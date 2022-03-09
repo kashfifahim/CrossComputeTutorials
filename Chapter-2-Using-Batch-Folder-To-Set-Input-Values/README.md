@@ -1,4 +1,4 @@
-# Title of Tutorial
+# Chapter 2: Using Batch Folder to Set Input Values
 ## Section 0: Summary -- What you will need, what you will get done by the end of the tutorial, who to reach out if you are having problems
 
 ## Section 1: Introduction to the simulation
