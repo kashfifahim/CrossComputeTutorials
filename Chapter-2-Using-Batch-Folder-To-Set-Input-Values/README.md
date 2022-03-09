@@ -7,9 +7,8 @@ Your company has taken on a new project.  The stakeholders want to implement a b
 
 In the following days, you and your team discuss and gather the requirements.  Then, the team collaborated to map out the user stories. Finally, after some time developing and testing, your team has a minimum viable product in the form of a simulation, written in Python. 
 
-Let's git clone the team's simulation program to a local folder on our machine.
+Let's look at the team's simulation program. You can follow along with the code found in the ```src``` folder in the tutorials. [For this next section the code can be found here.](https://github.com/kashfifahim/CrossComputeTutorials/blob/main/src/Chapter-2/bikeshare.py)
 
-## TO DO: git clone source files
 
 Scrolling through the script we discover that it is mainly made up of function definitions.  What is of interest to us is discovering the interface to the simulation. This way, when we program to the interface, we will not have to concern ourselves with the implementation details of the simulation. All we need to be concerned with is what inputs does the simulation require and what output will it return. This is the common programming principle of programming to the interface, not to the implementation.
 
