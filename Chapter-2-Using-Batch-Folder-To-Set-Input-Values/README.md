@@ -86,7 +86,7 @@ Let's add the ```input``` configuration to our ```automate.yml```.
             - id: p2
                 view: number
             - id: num_steps
-
+                view: number
 
 
 After configuring the inputs, let's configure our outputs.
