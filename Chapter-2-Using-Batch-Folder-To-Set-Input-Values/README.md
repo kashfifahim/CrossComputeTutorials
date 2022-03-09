@@ -29,13 +29,20 @@ Great, everything is working.
 Up to this point we have a script holding all the functions for running the simulation.  We also developed an understanding of what the inputs and output are for the simualation.  In the next section, we will start configuring our simulation with the latet version of the CrossCompute Automation Framework.
 ## Configuring the automate.yml file
 
-In the previous section we inspected the source code for the simulation.  From our inspection, we were able to identify the key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. This new script imports all the functions from the simulation source code and at the same time provides us the space to write code to the simulation's interface and not to its implementation.
+In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will now imports all the functions from the simulation source code and at the same time provides us the space to write code to the simulation's interface and not to its implementation.
 
-In this section we take the first step towards using the CrossCompute Automation framework: configuring our ```automate.yml``` file. 
+(image of above paragraph)
 
-For many new to automation you might be asking, "what is a .yml file?"  A ```.yml``` file extension refers to a ```YAML``` file.  A YAML is a human-readable data format. If you are familiar with other data formats, such as ```JSON``` or ```XML```, ```YAML``` functions much in the same way but is easeir to read and write.  If this is your first time learning of ```YAML```, no worries, as you begin to use automation tools, like our CrossCompute Automation Framewrk, you will discover more and more tools that are using ```YAML``` for their automation workflow.  With this in mind, let's start configuring our ```automate.yml``` file for the CrossCompute Automation Framwork.
+Now in this section we take the first step towards using the CrossCompute Automation framework: configuring our ```automate.yml``` file. 
+
+For those new to automations you might be asking, "what is a .yml file?"  
+
+A ```.yml``` file extension refers to a ```YAML``` file.  A YAML is a human-readable data format. If you are familiar with other data formats, such as ```JSON``` or ```XML```, ```YAML``` functions much in the same way but it is easier to read and write.  As you begin to use automation tools, like our CrossCompute Automation Framewrk, you will discover more tools that require configuring and using a ```YAML``` for a given automation workflow.  With this in mind, let's start configuring our ```automate.yml``` file for the CrossCompute Automation Framwork.
 
 Let's start by creating a new file and then saving it as ```automate.yml```. 
+
+The ```automate.yml``` file can be filled with many sections. For this tutorial we are going to need to configure four sections. The first section provides the automation with some ```metadata```.  The second section then configures the ```inputs and outputs```. Next, we configure ```the batch section``` where we will tell the script where to find our inputs, datasets, and other options. Finally, we configure ```the scripts``` for running our automation.
+
 
 Next, let us enter some metadata for our automation.  
 
@@ -47,7 +54,9 @@ The next section we must configure for our automation is the ```batches``` secti
 
 Finally, let's configure our ```script``` section.  
 
-Before going any further, let's activate the virtual environment which has the CrossCompute package installed.  With that environment activated, let's run ```crosscompute``` together with our ```autoamte.yml``` file. 
+With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrouhg on how to set up your virtual environment. 
+
+With our virtual environment activated, let us go ahead and run ```crosscompute autoamte.yml```. 
 
 What should you see? In the terminal you should see the local address where your automation is being served.  
 
