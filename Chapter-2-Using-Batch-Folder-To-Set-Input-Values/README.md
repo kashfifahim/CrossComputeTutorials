@@ -42,7 +42,7 @@ Let's start by creating a new file and then saving it as ```automate.yml```.
 
 The ```automate.yml``` file can be filled with many sections. For this tutorial we are going to need to configure four sections. The first section provides the automation with some ```metadata```.  The second section then configures the ```inputs and outputs```. Next, we configure ```the batch section``` where we will tell the script where to find our inputs, datasets, and other options. Finally, we configure ```the scripts``` for running our automation.
 
-
+### automate.yml > metadata section
 Let us get started with configuring our ```automate.yml``` file by filling in the first section: our project's metadata.
 
 First configure the version of ```crosscompute``` you will be using. At the time of writing, ```crosscompute``` is at version ```0.9.1```.  
@@ -60,7 +60,7 @@ Next, we are going to gave a name to our automation.
     # name of your automation
     name: Olin-Wellesly Bikeshare System
 
-Finally, to wrap up the ```metadata``` section let's add a version number to our ```automation```.
+Finally, to wrap up the ```metadata``` section let's add a version number to our ```automation```. This completes the ```metadata``` part of our ```automate.yml``` configuration file.  Our ```automate.yml``` file should contain the following:
 
     ---
     # version of crosscompute
@@ -72,24 +72,29 @@ Finally, to wrap up the ```metadata``` section let's add a version number to our
     # version of your automation
     version: 0.0.2
 
-That completes the ```metadata``` part of our ```automate.yml``` configuration file.  Next we will configure the input and output configurations.
+Next we will configure the input and output configurations.
 
-
+### automate.yml > input configuration and output configuration section
 Now, let us define the inputs.
 
 After configuring the inputs, let's configure our outputs.
 
+### automate.yml > batches configuration section
 The next section we must configure for our automation is the ```batches``` section.
 
+### automate.yml > script configuration section
 Finally, let's configure our ```script``` section.  
 
 With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
 
-With our virtual environment activated, let us go ahead and run ```crosscompute autoamte.yml```. 
+### crosscompute automate.yml
+With our virtual environment activated, let us go ahead and run ```crosscompute automate.yml```. 
 
 What should you see? In the terminal you should see the local address where your automation is being served.  
 
 You should also see, in the project directory, a new folder called batches.  We need to go into that directory, and there you should see another folder called ```input```. Let's go into that folder and create a new file called ```variables.dictionary```.
+
+### batches > input > variables.dictionary
 
 
 
