@@ -178,18 +178,46 @@ In our current tutorial, we are working on the first use case of just defining a
 For the first use case, for the purposes of this first tutorial, that is all that is needed for configuring the ```batches``` section of our ```automate.yml``` file.  In the next section we are going to configure the final section of our ```automate.yml``` file, the ```scripts configuration``` section.
 
 ### ```automate.yml``` > ```script configuration``` section
-Finally, let's configure our ```scripts``` section.  In this section ```scripts``` all we need to do is tell ```crosscompute``` where it can find our script. 
+Finally, let's configure our ```scripts``` section.  In this section ```scripts``` all we need to do is tell ```crosscompute``` the ```command``` to execute for our automation to execute. 
 
 Now, we have two scripts.  Which script should we choose? 
 
-Our first script, ```bikeshare.py```, originally had all the function definitions and the entry point to running the simulation.  Then we created a second script called ```run.py```. ```run.py``` then became the script to which we imported all the functions from the aforementioned ```bikeshare.py```. ```run.py``` is also now the entry point to automating our simulation.  To answer the question, we are going to choose ```run.py``` as it will serve as the brain to our automation.
+Our first script, ```bikeshare.py```, originally had all the function definitions and the entry point to running the simulation.  Then we created a second script called ```run.py```. ```run.py``` then became the script to which we imported all the functions from the aforementioned ```bikeshare.py```. ```run.py``` is also now the entry point to automating our simulation.  To answer the question, we are going to choose ```run.py``` as it will serve as the brain to our automation. 
+
+At the time of writing this tutorial, ```crosscompute``` needs Python version 3.9 and higher.  Naturally, it follows that our command will use the ```python3.9```, our script, ```run.py```, and two placeholder variables ```{input_folder} {output_folder}``` that the ```crosscompute automation framework``` will provide to the script. 
 
     # script configuration
     scripts:
-        - path: run.py
+        - command: python3.9 run.py {input_folder} {output_folder}
 
+With those three line, we are done configuring our ```automate.yml``` file. 
+## Check On Our To Do List
 
+Before we go any further, when we were configuring our ```scripts``` section of the ```automate.yml``` file we passed in two placeholder arguments with our command.  Now ```run.py``` will need to access those two placeholder arguments. Let's bring up our ```TO DO``` list and add a couple of more tasks.
 
+First, let's review what we already had:
+
+    TO DO 
+                [] create an input_folder
+                [] create a variables.dictionary
+                [] declare and assign value to p1, p2, num_steps for first simulation
+
+                [] create an output_folder
+
+Now let's add a few things we need to add to our ```run.py``` script.
+    TO DO 
+                To project structure
+                    [] create an input_folder
+                    [] create a variables.dictionary
+                    [] declare and assign value to p1, p2, num_steps for first simulation
+
+                    [] create an output_folder
+
+                To run.py:
+                    [] create variables ```input_folder``` and ```output_folder```
+                    [] assign values to ```input_folder``` and ```output_folder``` through ```argv```
+                    [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
+                    [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
 
 
 With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
