@@ -6,7 +6,7 @@
 
 ## Section 2: A little about using reference folder to set default values for missing variables
 
-The last tutorials, we used batches for different purposes.  In the first tutorial, [](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ````/batches/a/input``` folder. 
+The last tutorials, we used batches for different purposes.  In the first tutorial, [](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
 
 In the second tutorial, [](), we built up on the first ```batch configuration```.  We now provided our automation with a path to a ```csv``` file that had many more sets of input variables. From that ```csv``` file, we wanted our automation to yield a simulation for each set of input data.
 
