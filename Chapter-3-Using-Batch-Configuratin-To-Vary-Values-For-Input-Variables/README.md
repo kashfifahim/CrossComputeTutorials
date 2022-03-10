@@ -15,6 +15,32 @@ Let's get started.
 
 ## Section 4: Configuring the ```batch configuration```
 
+Next, let's configure the ```batches``` section of our ```automate.yml``` file.  
+
+In our last tutorial, [](), we configured the ```batches``` section with a folder, which we simply set up as ```folder: batches/a```.  Now we're going to add another folder.
+
+    # batches configuration
+    batches:
+        - folder: batches/a
+    
+        - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+
+Our folder name here contains placeholder variables.  Why is that?  This is so that our folder structure can be linked to the set of input values our automation used from the ```.csv``` file.  
+
+Next, we are going to provide our folder with ```configuration``` attribute which will have a ```path``` attribute. This ```path``` will point the automation to the location of the datasets with our ```.csv``` file, which we are going to name ```batches.csv```.
+
+    # batches configuration
+    batches:
+        - folder: batches/a
+    
+        - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+          configuration:
+            path: datasets/batches.csv
+
+A quick recap of what is going on with our ```batches``` configuration.  The first folder, which we configured in the last tutorial, genrally serves as a reference for the automation.  Now in the second folder we are configuring it so that the ```automation``` now has access to more input variables. Key point is that the ```input variables``` are still the same kind as configured earlier in the first folder. The only difference is in the second cofiguration will automate and yield more results rather than one.
+
+With our ```automate.yml``` now configured with the updated ```batches``` configuration, we can go ahead and run the automation.
+
 ## Section 5: Running ```crosscompute automate.yml```
 
 ## Section 6: Inspecting ```batch``` folder
