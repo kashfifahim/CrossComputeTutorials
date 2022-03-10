@@ -166,7 +166,16 @@ While that completes our configuration of the ```output``` section of the ```aut
 At this poit, be sure to save your ```automate.yml``` file.  We are now going to move on to configuring the ```batches``` section of our ```automate.yml``` file.
 
 ### ```automate.yml``` > ```batches configuration``` section
-The next section we must configure for our automation is the ```batches``` section.
+The next section we must configure for our automation is the ```batches``` section.  Up to this point we've defined our ```metadata```, our ```input configuration```, and our ```output_cofiguration```.  The ```batch configuration``` is where ```crosscompute``` shows off its ease of use. 
+
+For the ```batch cofiguration``` there are three key use cases. The first is to define a batch folder from which a set of values for your input variables can be found. The second use case is providing a ```batch configuration``` where an assorted amount of varible values can be provided to the automation through, for example, a simple ```csv``` file. Finally, in the third use case, we can use a reference folder with a set of default values. Those default values can then be used to fill in missing values for variables while shifting and changinge selected variables. 
+
+In our current tutorial, we are working on the first use case of just defining a ```folder``` in the ```batch``` configuration section where our ```variables.dictionary``` will be stored. After declaring the batch section with ```batches:```, in the following line, after an indent, we're going to set the ```folder``` attribute to ```batches/a```. This means that within the current project directory we will need a folder called ```batches``` which has a subfolder within it called ```a```.  Feel free to set the folder name to anything you wish, just make sure to create the folder and subfolder with the same names.
+
+    batches:
+        - folder: batches/a
+
+For the first use case, for the purposes of this first tutorial, that is all that is needed for configuring the ```batches``` section of our ```automate.yml``` file.  In the next section we are going to configure the final section of our ```automate.yml``` file, the ```scripts configuration``` section.
 
 ### ```automate.yml``` > ```script configuration``` section
 Finally, let's configure our ```script``` section.  
