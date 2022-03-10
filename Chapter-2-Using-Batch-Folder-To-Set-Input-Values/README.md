@@ -205,6 +205,7 @@ First, let's review what we already had:
                 [] create an output_folder
 
 Now let's add a few things we need to add to our ```run.py``` script.
+
     TO DO 
                 To project structure
                     [] create an input_folder
@@ -218,7 +219,6 @@ Now let's add a few things we need to add to our ```run.py``` script.
                     [] assign values to ```input_folder``` and ```output_folder``` through ```argv```
                     [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
                     [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
-
 
 With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
 
