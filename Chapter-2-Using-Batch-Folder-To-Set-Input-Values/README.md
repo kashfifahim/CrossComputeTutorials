@@ -220,15 +220,25 @@ Now let's add a few things we need to add to our ```run.py``` script.
                     [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
                     [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
 
-With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
+Now, we need to complete the tasks from our ```TO DO```list. After these quick modifications we will be two commands away from automation using the ```crosscompute automation framework```.
 
-### ```crosscompute``` ```automate.yml```
-With our virtual environment activated, let us go ahead and run ```crosscompute automate.yml```. 
+### Changes to Project Structure: Adding input_folder, output_folder
 
-What should you see? In the terminal you should see the local address where your automation is being served.  
+### Creating a variables.dictionary with p1, p2, num_steps
 
-You should also see, in the project directory, a new folder called batches.  We need to go into that directory, and there you should see another folder called ```input```. Let's go into that folder and create a new file called ```variables.dictionary```.
+### Modifying run.py
 
-### ```batches``` > ```input``` > ```variables.dictionary```
+## Ready For Launch
+
+With our ```automate.yml``` file ready to go, our project structure with correct contents in place, now is a good time to activate the virtual environment. [We will be using the virtual environment created in the previous tutorial](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute), that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
 
 ## ```crosscompute``` ```automate.yml```
+With our virtual environment activated, all that is left for us to do is in our terminal enter and run the following ```crosscompute automate.yml```. 
+
+What happens next? 
+
+In the terminal you should see ```crosscompute``` fire up and show you a local host address. If your terminal has permission to launch your web browser, your default web browser should have launched. If not, please copy the address in the terminal window, paste and enter into your default web browser.  Your web browser should then show you a link, which when clicked will take you to the automation. 
+
+Then there will be a link for ```input``` and ```output```.  Clicking on ```input``` will take you to a page with numerical input fields. These fields will be prepopulated with teh values defined in our ```variables.dictionary``` file.  The more interesting link is the ```output```.  The ```output``` link will take you to the figure generated from running our script with the variables found in the ```varibales.dictionary``` file.
+
+At this point we have reached the end of this tutorial. In the next tutorial, we are going to go back to our ```batch configuration``` and assign a ```csv``` file filled with values to be the source of our ```input variables```. By doing this we are not just going to see one graph but one graph for each row of variable values found in the ```.csv``` file. 
