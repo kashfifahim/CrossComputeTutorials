@@ -178,7 +178,19 @@ In our current tutorial, we are working on the first use case of just defining a
 For the first use case, for the purposes of this first tutorial, that is all that is needed for configuring the ```batches``` section of our ```automate.yml``` file.  In the next section we are going to configure the final section of our ```automate.yml``` file, the ```scripts configuration``` section.
 
 ### ```automate.yml``` > ```script configuration``` section
-Finally, let's configure our ```script``` section.  
+Finally, let's configure our ```scripts``` section.  In this section ```scripts``` all we need to do is tell ```crosscompute``` where it can find our script. 
+
+Now, we have two scripts.  Which script should we choose? 
+
+Our first script, ```bikeshare.py```, originally had all the function definitions and the entry point to running the simulation.  Then we created a second script called ```run.py```. ```run.py``` then became the script to which we imported all the functions from the aforementioned ```bikeshare.py```. ```run.py``` is also now the entry point to automating our simulation.  To answer the question, we are going to choose ```run.py``` as it will serve as the brain to our automation.
+
+    # script configuration
+    scripts:
+        - path: run.py
+
+
+
+
 
 With our ```automate.yml``` file ready to go, now is a good time to activate the virtual environment that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
 
