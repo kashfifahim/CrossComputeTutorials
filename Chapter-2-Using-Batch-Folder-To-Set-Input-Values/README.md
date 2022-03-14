@@ -79,40 +79,40 @@ First we're going to tell our ```automate.yml``` file that we are now configurin
 
     # input configuration
     input:
-        # input variables
-        variables:
-            - id: p1
-            - id: p2
-            - id: num_steps
+      # input variables
+      variables:
+        - id: p1
+        - id: p2
+        - id: num_steps
 
 Next, we need to tell our ```automate.yml``` file how to render each of these variables.  Wwe know each variables, ```p1```, ```p2```, ```num_steps``` are going to be holding numbers, so we are going to add a ```view``` attribute to each of the ```id``` and set them to ```number```.
 
     # input configuration
     input:
-        # input variables
-        variables:
-            - id: p1
-                view: number
-            - id: p2
-                view: number
-            - id: num_steps
-                view: number
+      # input variables
+      variables:
+        - id: p1
+          view: number
+        - id: p2
+          view: number
+        - id: num_steps
+          view: number
 
 Finally, we need to provide ```automate.yml``` a path to where the script can load these variables.  Here we have a lot of choices.  You can use a ```csv```, you can use a ```json```, but for this tutorial we can actually work with a simple ```.dictionary``` file which we will call ```variables.dictionary```. Since each of the variables will be located in the same file, we can now go ahead and assign the ```path``` attribute to each ```id``` and assign the ```variables.dictionary``` to the ```path```. The ```variables.dictionary``` file path will be relative to a folder called ```input_folder``` that we will need to later create.
 
     # input configuration
     input:
-        # input variables
-        variables:
-            - id: p1
-                view: number
-                path: variables.dictionary
-            - id: p2
-                view: number
-                path: variables.dictionary
-            - id: num_steps
-                view: number
-                path: variables.dictionary
+    # input variables
+      variables:
+        - id: p1
+          view: number
+            path: variables.dictionary
+        - id: p2
+          view: number
+            path: variables.dictionary
+        - id: num_steps
+          view: number
+            path: variables.dictionary
 
 We are going to need to complete some follow up tasks. To keep track of those follow up takss let's create a ``TO DO`` note and add the following tasks for ourselves: 
 
