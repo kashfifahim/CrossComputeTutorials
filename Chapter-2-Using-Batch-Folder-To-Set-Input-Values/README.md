@@ -236,6 +236,17 @@ First lets create an input_folder, then within it, let's create a ```variables.d
 
 ![Create variables.dictionary within the input_folder folder inside project folder](/assets/gifs/Create-variables-dictioanry.gif "Create variables.dictionary within the input_folder folder inside project folder")
 
+Let us not forget the second folder, ```output_folder```. Make sure you are inside the root folder of your project folder, then create the ```output_folder```. 
+
+![Create an output_folder](/assets/gifs/CreateOutputFolder.gif "Create an output_folder")
+
+Once we have created out ```variables.dictionary``` inside the ```input_folder```, we can then create a ```output_folder```.  With that, we are done with out tasks for the project structure.
+
+Let us move on to the tasks for ```run.py```.
+
+### Tasks for ```run.py```
+
+
 After these quick modifications we will be two commands away from automation using the ```crosscompute automation framework```.
 
 ### Changes to Project Structure: Adding input_folder, output_folder
