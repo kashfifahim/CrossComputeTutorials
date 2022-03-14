@@ -227,6 +227,7 @@ Now let's add a few things we need to add to our ```run.py``` script.
             [] assign values to ```input_folder``` and ```output_folder``` through ```argv```
             [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
             [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
+            - [ ] Save ```fig``` to the ```output_folder```
 
 Before running out automation, let us complete these quick tasks from our ```TO DO``` list. 
 
@@ -261,9 +262,25 @@ Let's get started.
 
 First, we are going to import ```argv``` from Python's ```sys``` library. ```argv``` will allow the ```command script``` in our ```automate.yml``` file to pass in the ```input_folder``` and ```output_folder``` as arguments to ```run.py```.  
 
+  from sys import argv
+
 After importing ```argv```, let us then create the ```input_folder``` and ```output_folder``` variables that ```argv``` will get as arguments.
 
+  from sys import argv
+
+  # Get folder paths from command-line arguments
+  input_folder, output_folder = argv[1: ]
+
 ![Import argv from sys then create variables](/assets/gifs/argvForRun.gif "Import argv from sys then create variables to hold arguments passed from command line")
+
+Next, we are going to use the ```json``` library to import the data from our ```variables.dictionary``` file.  
+
+  # load input variables from input_folder
+  variables = json.load(open(join(input_folder, 'variables.dictionary), 'rt'))
+
+Finally, let's connect the data to our simulation. We will replace the second, third, and fourth arguments in our call to ```run_simulation``` with the correspoinding data found in our variables.dictionary file.
+
+  results = run_simulation(bikeshare, variables["p1"], variables["p2"], variables["num_steps"])
 
 ## Ready For Launch
 
