@@ -197,6 +197,8 @@ At the time of writing this tutorial, ```crosscompute``` needs Python version 3.
       - command: python3.9 run.py {input_folder} {output_folder}
 
 With those three lines, we are done configuring our ```automate.yml``` file. 
+
+![Creating our automate.yml file](/assets/gifs/Creating%20the%20automate-yml%20file.gif "Creating our automate.yml file")
 ## Check On Our To Do List
 
 Before we go any further, when we were configuring our ```scripts``` section of the ```automate.yml``` file we passed in two placeholder arguments with our command.  Now ```run.py``` will need to access those two placeholder arguments. Let's bring up our ```TO DO``` list and add a couple of more tasks.
