@@ -102,8 +102,3 @@ def display_results(results):
             ylabel = 'Number of bikes')
     result_fig = result_graph.get_figure()
     return result_fig
-
-bikeshare = State(olin = 6, wellesley = 6)
-results = run_simulation(bikeshare, 0.2, 0.1, 30)
-simulation_figure = display_results(results)
-plt.savefig(join(".", "simulation-graph.png"))
