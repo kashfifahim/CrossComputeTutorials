@@ -198,27 +198,27 @@ Before we go any further, when we were configuring our ```scripts``` section of 
 First, let's review what we already had:
 
     TO DO 
-                [] create an input_folder
-                [] create a variables.dictionary
-                [] declare and assign value to p1, p2, num_steps for first simulation
+        [] create an input_folder
+        [] create a variables.dictionary
+        [] declare and assign value to p1, p2, num_steps for first simulation
 
-                [] create an output_folder
+        [] create an output_folder
 
 Now let's add a few things we need to add to our ```run.py``` script.
 
     TO DO 
-                To project structure
-                    [] create an input_folder
-                    [] create a variables.dictionary
-                    [] declare and assign value to p1, p2, num_steps for first simulation
+        To the project structure
+            [] create an input_folder
+            [] create a variables.dictionary
+            [] declare and assign value to p1, p2, num_steps for first simulation
 
-                    [] create an output_folder
+            [] create an output_folder
 
-                To run.py:
-                    [] create variables ```input_folder``` and ```output_folder```
-                    [] assign values to ```input_folder``` and ```output_folder``` through ```argv```
-                    [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
-                    [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
+        To run.py:
+            [] create variables ```input_folder``` and ```output_folder```
+            [] assign values to ```input_folder``` and ```output_folder``` through ```argv```
+            [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
+            [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
 
 Now, we need to complete the tasks from our ```TO DO```list. After these quick modifications we will be two commands away from automation using the ```crosscompute automation framework```.
 
