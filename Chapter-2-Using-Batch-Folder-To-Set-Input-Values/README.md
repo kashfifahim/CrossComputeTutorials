@@ -79,7 +79,7 @@ First we're going to tell our ```automate.yml``` file that we are now configurin
 
     # input configuration
     input:
-      # input variables
+    # input variables
       variables:
         - id: p1
         - id: p2
@@ -129,30 +129,30 @@ Configuring the ```output``` section is similar to the steps taken when configur
 First let's declare the ```output``` section and underneath declare the ```variables``` section.
 
     output:
-        variables:
+      variables:
 
 Earlier in our inspection of the simulation source code we noted that there were three input variables, ```p1```, ```p2```, and ```num_steps```. For each set of these ```input variables``` came an output that was a graph saved as an image, ```simulation-graph.png```.  We just need to configure these details into our ```automate.yml``` file. 
 
 First let's give theoutut variable an ```id```. 
 
     output:
-            variables:
-                - id: simulation_graph
+      variables:
+        - id: simulation_graph
 
 Next, because the variable is going to be rendered and saved as a ```.png``` we need to set ```simulation_graph```'s ```view``` attribute as that of an ```image```.
 
     output:
-            variables:
-                - id: simulation_graph
-                    view: image
+      variables:
+        - id: simulation_graph
+          view: image
 
 The last detail to configure, just like we did for ```input```, we need to give a path where ```simulation_graph``` output would be found. This path is relative to an ```output_folder``` that we will need to create.
 
  output:
-            variables:
-                - id: simulation_graph
-                    view: image
-                    path: simulation-graph.png
+  variables:
+    - id: simulation_graph
+      view: image
+        path: simulation-graph.png
 
 While that completes our configuration of the ```output``` section of the ```automate.yml``` file, like before with the ```input``` configuration, we are going to need to add some tasks to our running ```TO DO``` list. Luckily, the ```output_variable``` will be the result of the automation. So we just need to create the ```output_folder```.
 
@@ -173,7 +173,7 @@ For the ```batch cofiguration``` there are three key use cases. The first is to 
 In our current tutorial, we are working on the first use case of just defining a ```folder``` in the ```batch``` configuration section where our ```variables.dictionary``` will be stored. After declaring the batch section with ```batches:```, in the following line, after an indent, we're going to set the ```folder``` attribute to ```batches/a```. This means that within the current project directory we will need a folder called ```batches``` which has a subfolder within it called ```a```.  Feel free to set the folder name to anything you wish, just make sure to create the folder and subfolder with the same names.
 
     batches:
-        - folder: batches/a
+      - folder: batches/a
 
 For the first use case, for the purposes of this first tutorial, that is all that is needed for configuring the ```batches``` section of our ```automate.yml``` file.  In the next section we are going to configure the final section of our ```automate.yml``` file, the ```scripts configuration``` section.
 
@@ -188,7 +188,7 @@ At the time of writing this tutorial, ```crosscompute``` needs Python version 3.
 
     # script configuration
     scripts:
-        - command: python3.9 run.py {input_folder} {output_folder}
+      - command: python3.9 run.py {input_folder} {output_folder}
 
 With those three line, we are done configuring our ```automate.yml``` file. 
 ## Check On Our To Do List
