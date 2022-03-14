@@ -25,7 +25,7 @@ To make our workflow easier, we are going to create a second Python script, in t
 
 With an understanding of the interface of the simulation under our belt, let's now create a new Python script and save it as ```run.py```.  
 
-![Our first iteration of run.py](assets/gifs/run-py-1.gif "Our first go at run.py")
+![Our first iteration of run.py](/assets/gifs/run-py-1.gif "Our first go at run.py")
 
 Within ```run.py``` we will import all the functions from the simulation script.  Now, let's take a second to test that our import works by running a test simulation. 
 
