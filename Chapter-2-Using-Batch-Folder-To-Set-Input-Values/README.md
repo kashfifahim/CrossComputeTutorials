@@ -255,6 +255,16 @@ After these quick modifications we will be two commands away from automation usi
 
 ### Modifying run.py
 
+We have four tasks that will modify ```run.py```.   These four tasks will connect our script to the variables found in the ```variables.dictionary``` file.  We will then use that connection to pass on the ```input_variables``` to our automation. 
+
+Let's get started.
+
+First, we are going to import ```argv``` from Python's ```sys``` library. ```argv``` will allow the ```command script``` in our ```automate.yml``` file to pass in the ```input_folder``` and ```output_folder``` as arguments to ```run.py```.  
+
+After importing ```argv```, let us then create the ```input_folder``` and ```output_folder``` variables that ```argv``` will get as arguments.
+
+![Import argv from sys then create variables](/assets/gifs/argvForRun.gif "Import argv from sys then create variables to hold arguments passed from command line")
+
 ## Ready For Launch
 
 With our ```automate.yml``` file ready to go, our project structure with correct contents in place, now is a good time to activate the virtual environment. [We will be using the virtual environment created in the previous tutorial](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute), that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an in depth walkthrough on how to set up your virtual environment. 
