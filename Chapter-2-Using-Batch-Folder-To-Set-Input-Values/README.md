@@ -7,7 +7,7 @@ Your company has taken on a new project.  The stakeholders want to implement a b
 
 In the following days, you and your team discuss and gather the requirements.  Then, the team collaborated to map out the user stories. Finally, after some time developing and testing, your team has a minimum viable product in the form of a simulation, written in Python. 
 
-Let's look at the team's simulation program. You can follow along with the code found in the ```src``` folder in the tutorials. [For this next section the code can be found here.](https://github.com/kashfifahim/CrossComputeTutorials/blob/main/src/Chapter-2/bikeshare.py)
+Let's look at the team's simulation program. [You can follow along with the code found in the ```src``` folder in the tutorials. For this next section the code can be found here.](https://github.com/kashfifahim/CrossComputeTutorials/blob/main/src/Chapter-2/bikeshare.py)
 
 ### Programming to the Interface, Not the Implementation, ```run.py```
 
