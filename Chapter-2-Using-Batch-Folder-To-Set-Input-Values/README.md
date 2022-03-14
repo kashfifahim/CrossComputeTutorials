@@ -228,7 +228,15 @@ Now let's add a few things we need to add to our ```run.py``` script.
             [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
             [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
 
-Now, we need to complete the tasks from our ```TO DO```list. After these quick modifications we will be two commands away from automation using the ```crosscompute automation framework```.
+Before running out automation, let us complete these quick tasks from our ```TO DO``` list. 
+
+### Tasks For The Project Structure.
+
+First lets create an input_folder, then within it, let's create a ```variables.dictionary``` file.
+
+![Create variables.dictionary within the input_folder folder inside project folder](/assets/gifs/Create-variables-dictioanry.gif "Create variables.dictionary within the input_folder folder inside project folder")
+
+After these quick modifications we will be two commands away from automation using the ```crosscompute automation framework```.
 
 ### Changes to Project Structure: Adding input_folder, output_folder
 
