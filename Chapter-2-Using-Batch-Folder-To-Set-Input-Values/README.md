@@ -13,9 +13,9 @@ Let's look at the team's simulation program. You can follow along with the code 
 
 Scrolling through the script we discover that it is mainly made up of function definitions.  What is of interest to us is discovering the interface to the simulation. This way, when we program to the interface, we will not have to concern ourselves with the implementation details of the simulation. All we need to be concerned with is what inputs does the simulation require and what output will it return. This is the common programming principle of programming to the interface, not to the implementation.
 
-Near the end of the program we find the program initializes a ```State``` object with ```olin = 6``` and ```wellesley = 6``` and saves it to a variable called bikeshare.  This is the starting point for simulation, initializing the system with six bikes at each campus. In the next line, the program calls the ```run_simulation``` function. From looking at functiond definition, the ```run_simulation``` function takes the previously created ```State``` object, and three other arguments: ```p1```, ```p2```, and ```num_steps```. Those are the inputs to the ```run_simulation``` function.  The function then returns a ```TimeSeries``` object, which is saved in the variable ```results```. Next the program pushes the ```results``` to the ```display_results``` function which returns a graph of the data simulated and saved in the ```TimeSeries``` object.  
+Near the end of the program we find the program initializes a ```State``` object with ```olin = 6``` and ```wellesley = 6``` and saves it to a variable called bikeshare.  This is the starting point for simulation, initializing the system with six bikes at each campus. In the next line, the program calls the ```run_simulation``` function. From looking at function definition, the ```run_simulation``` function takes the previously created ```State``` object, and three other arguments: ```p1```, ```p2```, and ```num_steps```. Those are the inputs to the ```run_simulation``` function.  The function then returns a ```TimeSeries``` object, which is saved in the variable ```results```. Next the program pushes the ```results``` to the ```display_results``` function which returns a graph of the data simulated and saved in the ```TimeSeries``` object.  
 
-From our first analysis of the program we found that the simulation needs a ```State``` object initialized to how many bikes the system should have.  Then to run the simulation, the program needs three inputs.  The first pair of inputs, ```p1``` and ```p2``` are floating point numbers between 0.1 and 0.9. The third input, ```num_steps```, is the length of time, in mimutes, the system is simulating.  For example, if the ```num_step = 60```, this means the resulting simulation is one that takes place over sixty-minutes.  
+From our first analysis of the program we found that the simulation needs a ```State``` object initialized to how many bikes the system should have.  Then to run the simulation, the program needs three inputs.  The first pair of inputs, ```p1``` and ```p2``` are floating point numbers between 0.1 and 0.9. The third input, ```num_steps```, is the length of time, in minutes, the system is simulating.  For example, if the ```num_step = 60```, this means the resulting simulation is one that takes place over sixty-minutes.  
 
 To make our workflow easier, we are going to create a second Python script, in the same folder as the simulation source code, called ```run.py```. We will import all the functions from the simulation source code and run the code necessary to run a simulation successfully. Let us then run ```run.py``` to see all the functions are imported successfully.  Once ```run.py``` runs without error, we are then ready to continue and introduce ```crosscompute``` to the project.
 
@@ -23,10 +23,10 @@ With an understanding of the interface of the simulation under our belt, let's n
 
 Within ```run.py``` we will import all the functions from the simulation script.  Now, let's take a second to test that our import works by running a test simulation. 
 
-Up to this point we have a script holding all the functions for running the simulation.  In addition, we now have a ```run.py``` script that serves as our entry point to the simulation.  We know the arguments that must be passed to the simulation, those arguments will serve as the variables to change in automating the simulation. In the next section, we will start configuring our simulation with the latet version of the CrossCompute Automation Framework.
+Up to this point we have a script holding all the functions for running the simulation.  In addition, we now have a ```run.py``` script that serves as our entry point to the simulation.  We know the arguments that must be passed to the simulation, those arguments will serve as the variables to change in automating the simulation. In the next section, we will start configuring our simulation with the latest version of the CrossCompute Automation Framework.
 ## Configuring the automate.yml file
 
-In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will now imports all the functions from the simulation source code and at the same time provides us the space to write code to the simulation's interface and not to its implementation.
+In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will now  all the functions from the simulation source code and at the same time provide us the space to write code to the simulation's interface and not to its implementation.
 
 (image of above paragraph)
 
@@ -34,7 +34,7 @@ Now in this section we take the first step towards using the CrossCompute Automa
 
 For those new to automations you might be asking, "what is a .yml file?"  
 
-A ```.yml``` file extension refers to a ```YAML``` file.  A YAML is a human-readable data format. If you are familiar with other data formats, such as ```JSON``` or ```XML```, ```YAML``` functions much in the same way but it is easier to read and write.  As you begin to use automation tools, like our CrossCompute Automation Framewrk, you will discover more tools that require configuring and using a ```YAML``` for a given automation workflow.  With this in mind, let's start configuring our ```automate.yml``` file for the CrossCompute Automation Framwork.
+A ```.yml``` file extension refers to a ```YAML``` file.  A YAML is a human-readable data format. If you are familiar with other data formats, such as ```JSON``` or ```XML```, ```YAML``` functions much in the same way but it is easier to read and write.  As you begin to use automation tools, like our CrossCompute Automation Framework, you will discover more tools that require configuring and using a ```YAML``` for a given automation workflow.  With this in mind, let's start configuring our ```automate.yml``` file for the CrossCompute Automation Framework.
 
 Let's start by creating a new file and then saving it as ```automate.yml```. 
 
@@ -49,14 +49,14 @@ First configure the version of ```crosscompute``` you will be using. At the time
     # version of crosscompute
     crosscompute: 0.9.1
 
-Next, we are going to gave a name to our automation.
+Next, we are going to give a name to our automation.
 
     ---
     # version of crosscompute
     crosscompute: 0.9.1
 
     # name of your automation
-    name: Olin-Wellesly Bikeshare System
+    name: Olin-Wellesley Bike Share System
 
 Finally, to wrap up the ```metadata``` section let's add a version number to our ```automation```. This completes the ```metadata``` part of our ```automate.yml``` configuration file.  Our ```automate.yml``` file should contain the following:
 
@@ -85,7 +85,7 @@ First we're going to tell our ```automate.yml``` file that we are now configurin
         - id: p2
         - id: num_steps
 
-Next, we need to tell our ```automate.yml``` file how to render each of these variables.  Wwe know each variables, ```p1```, ```p2```, ```num_steps``` are going to be holding numbers, so we are going to add a ```view``` attribute to each of the ```id``` and set them to ```number```.
+Next, we need to tell our ```automate.yml``` file how to render each of these variables.  We know each input variable, ```p1```, ```p2```, ```num_steps``` are going to be holding numbers, so we are going to add a ```view``` attribute to each of the ```id``` and set them to ```number```.
 
     # input configuration
     input:
@@ -114,7 +114,7 @@ Finally, we need to provide ```automate.yml``` a path to where the script can lo
           view: number
             path: variables.dictionary
 
-We are going to need to complete some follow up tasks. To keep track of those follow up takss let's create a ``TO DO`` note and add the following tasks for ourselves: 
+We are going to need to complete some follow up tasks. To keep track of those follow up tasks let's create a ``TO DO`` note and add the following tasks for ourselves: 
 
     TO DO 
         [] create an input_folder
@@ -133,7 +133,7 @@ First let's declare the ```output``` section and underneath declare the ```varia
 
 Earlier in our inspection of the simulation source code we noted that there were three input variables, ```p1```, ```p2```, and ```num_steps```. For each set of these ```input variables``` came an output that was a graph saved as an image, ```simulation-graph.png```.  We just need to configure these details into our ```automate.yml``` file. 
 
-First let's give theoutut variable an ```id```. 
+First let's give the output variable an ```id```. 
 
     output:
       variables:
@@ -163,12 +163,12 @@ While that completes our configuration of the ```output``` section of the ```aut
 
             [] create an output_folder
 
-At this poit, be sure to save your ```automate.yml``` file.  We are now going to move on to configuring the ```batches``` section of our ```automate.yml``` file.
+At this point, be sure to save your ```automate.yml``` file.  We are now going to move on to configuring the ```batches``` section of our ```automate.yml``` file.
 
 ### ```automate.yml``` > ```batches configuration``` section
 The next section we must configure for our automation is the ```batches``` section.  Up to this point we've defined our ```metadata```, our ```input configuration```, and our ```output_cofiguration```.  The ```batch configuration``` is where ```crosscompute``` shows off its ease of use. 
 
-For the ```batch cofiguration``` there are three key use cases. The first is to define a batch folder from which a set of values for your input variables can be found. The second use case is providing a ```batch configuration``` where an assorted amount of varible values can be provided to the automation through, for example, a simple ```csv``` file. Finally, in the third use case, we can use a reference folder with a set of default values. Those default values can then be used to fill in missing values for variables while shifting and changinge selected variables. 
+For the ```batch configuration``` there are three key use cases. The first is to define a batch folder from which a set of values for your input variables can be found. The second use case is providing a ```batch configuration``` where an assorted amount of variable values can be provided to the automation through, for example, a simple ```csv``` file. Finally, in the third use case, we can use a reference folder with a set of default values. Those default values can then be used to fill in missing values for variables while shifting and changing selected variables. 
 
 In our current tutorial, we are working on the first use case of just defining a ```folder``` in the ```batch``` configuration section where our ```variables.dictionary``` will be stored. After declaring the batch section with ```batches:```, in the following line, after an indent, we're going to set the ```folder``` attribute to ```batches/a```. This means that within the current project directory we will need a folder called ```batches``` which has a subfolder within it called ```a```.  Feel free to set the folder name to anything you wish, just make sure to create the folder and subfolder with the same names.
 
@@ -190,7 +190,7 @@ At the time of writing this tutorial, ```crosscompute``` needs Python version 3.
     scripts:
       - command: python3.9 run.py {input_folder} {output_folder}
 
-With those three line, we are done configuring our ```automate.yml``` file. 
+With those three lines, we are done configuring our ```automate.yml``` file. 
 ## Check On Our To Do List
 
 Before we go any further, when we were configuring our ```scripts``` section of the ```automate.yml``` file we passed in two placeholder arguments with our command.  Now ```run.py``` will need to access those two placeholder arguments. Let's bring up our ```TO DO``` list and add a couple of more tasks.
@@ -230,7 +230,7 @@ Now, we need to complete the tasks from our ```TO DO```list. After these quick m
 
 ## Ready For Launch
 
-With our ```automate.yml``` file ready to go, our project structure with correct contents in place, now is a good time to activate the virtual environment. [We will be using the virtual environment created in the previous tutorial](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute), that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an indepth walkthrough on how to set up your virtual environment. 
+With our ```automate.yml``` file ready to go, our project structure with correct contents in place, now is a good time to activate the virtual environment. [We will be using the virtual environment created in the previous tutorial](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute), that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an in depth walkthrough on how to set up your virtual environment. 
 
 ## ```crosscompute``` ```automate.yml```
 With our virtual environment activated, all that is left for us to do is in our terminal enter and run the following ```crosscompute automate.yml```. 
@@ -239,6 +239,6 @@ What happens next?
 
 In the terminal you should see ```crosscompute``` fire up and show you a local host address. If your terminal has permission to launch your web browser, your default web browser should have launched. If not, please copy the address in the terminal window, paste and enter into your default web browser.  Your web browser should then show you a link, which when clicked will take you to the automation. 
 
-Then there will be a link for ```input``` and ```output```.  Clicking on ```input``` will take you to a page with numerical input fields. These fields will be prepopulated with teh values defined in our ```variables.dictionary``` file.  The more interesting link is the ```output```.  The ```output``` link will take you to the figure generated from running our script with the variables found in the ```varibales.dictionary``` file.
+Then there will be a link for ```input``` and ```output```.  Clicking on ```input``` will take you to a page with numerical input fields. These fields will be pre-populated with the values defined in our ```variables.dictionary``` file.  The more interesting link is the ```output```.  The ```output``` link will take you to the figure generated from running our script with the variables found in the ```variables.dictionary``` file.
 
 At this point we have reached the end of this tutorial. In the next tutorial, we are going to go back to our ```batch configuration``` and assign a ```csv``` file filled with values to be the source of our ```input variables```. By doing this we are not just going to see one graph but one graph for each row of variable values found in the ```.csv``` file. 
