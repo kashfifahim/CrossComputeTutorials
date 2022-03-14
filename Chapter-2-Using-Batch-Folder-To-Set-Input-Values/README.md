@@ -26,7 +26,7 @@ Within ```run.py``` we will import all the functions from the simulation script.
 Up to this point we have a script holding all the functions for running the simulation.  In addition, we now have a ```run.py``` script that serves as our entry point to the simulation.  We know the arguments that must be passed to the simulation, those arguments will serve as the variables to change in automating the simulation. In the next section, we will start configuring our simulation with the latest version of the CrossCompute Automation Framework.
 ## Configuring the automate.yml file
 
-In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will now  all the functions from the simulation source code and at the same time provide us the space to write code to the simulation's interface and not to its implementation.
+In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will know  all the functions from the simulation source code and at the same time provide us the space to write code to the simulation's interface and not to its implementation.
 
 (image of above paragraph)
 
