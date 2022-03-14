@@ -30,11 +30,11 @@ With an understanding of the interface of the simulation under our belt, let's n
 Within ```run.py``` we will import all the functions from the simulation script.  Now, let's take a second to test that our import works by running a test simulation. 
 
 Up to this point we have a script holding all the functions for running the simulation.  In addition, we now have a ```run.py``` script that serves as our entry point to the simulation.  We know the arguments that must be passed to the simulation, those arguments will serve as the variables to change in automating the simulation. In the next section, we will start configuring our simulation with the latest version of the CrossCompute Automation Framework.
-## Configuring the automate.yml file
+## Configuring our ```automate.yml``` file
 
-In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will know  all the functions from the simulation source code and at the same time provide us the space to write code to the simulation's interface and not to its implementation.
+In the previous section we inspected the source code of the bike share simulation.  From our inspection we were able to identify the program's key functions, and more importantly, we were able to identify the inputs and output for the simulation.  With that knowledge, we then created a new script called ```run.py```. Within this new script we will now have all the functions from the simulation source code and at the same time have the space to write code to the simulation's interface and not to its implementation.
 
-(image of above paragraph)
+![UML Diagram](/assets/imgs/ch2-01.png "UML Diagram")
 
 Now in this section we take the first step towards using the CrossCompute Automation framework: configuring our ```automate.yml``` file. 
 
