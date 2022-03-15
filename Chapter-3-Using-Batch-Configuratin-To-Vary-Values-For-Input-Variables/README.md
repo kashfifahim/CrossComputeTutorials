@@ -21,9 +21,9 @@ In our last tutorial, [](), we configured the ```batches``` section with a folde
 
     # batches configuration
     batches:
-        - folder: batches/a
+      - folder: batches/a
     
-        - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+       - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
 
 Our folder name here contains placeholder variables.  Why is that?  This is so that our folder structure can be linked to the set of input values our automation used from the ```.csv``` file.  
 
@@ -31,11 +31,11 @@ Next, we are going to provide our folder with ```configuration``` attribute whic
 
     # batches configuration
     batches:
-        - folder: batches/a
+      - folder: batches/a
     
-        - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
-          configuration:
-            path: datasets/batches.csv
+      - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+        configuration:
+          path: datasets/batches.csv
 
 A quick recap of what is going on with our ```batches``` configuration.  The first folder, which we configured in the last tutorial, genrally serves as a reference for the automation.  Now in the second folder we are configuring it so that the ```automation``` now has access to more input variables. Key point is that the ```input variables``` are still the same kind as configured earlier in the first folder. The only difference is in the second cofiguration will automate and yield more results rather than one.
 
