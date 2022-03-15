@@ -204,7 +204,9 @@ With those three lines, we are done configuring our ```automate.yml``` file.
 
 Up to this point we have our Bike Share model, ```bikeshare.py```, we have our ```run.py``` which we use to program to the model's interface. In the last section, we created our ```automate.yml``` file.  While we are not done setting up our automation, we are going to run ```crosscompute``` with our ```automate.yml``` file.  
 
-Why run that now?  By running it now, ```crosscompute``` will create our automation's folder structure, think of it as a shortcut.
+First, let's activate our virtual environment, which we earlier called ```automation```. [We will be using the virtual environment created in the previous tutorial](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute).  This virtual environment holds ```crosscompute``` package and all the related packages necessary for our automation.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an in depth walkthrough on how to set up your virtual environment.
+
+Why run ```crosscompute automate``` now?  By running it now, ```crosscompute``` will create our automation's folder structure, think of it as a shortcut.
 
 ![Run ```crosscompute automate.yml```](/assets/gifs/runCrossComputeAutomate1.gif "Run ```crosscompute automate.yml```")
 
@@ -263,15 +265,16 @@ We need to change it so that it does not save to the root folder as it currently
 ![Save to output_folder](/assets/gifs/SaveToOutputFolder.gif "Save to output_folder")
 ## Ready For Launch
 
-With our ```automate.yml``` file ready to go, our project structure with correct contents in place, now is a good time to activate the virtual environment. [We will be using the virtual environment created in the previous tutorial](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute), that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an in depth walkthrough on how to set up your virtual environment. 
+With our ```automate.yml``` file ready to go, our project structure with correct contents in place, and our virtual environment already activated from earlier, we are ready to run our automation. All that is left for us to do is in our terminal enter and run the following ```crosscompute automate.yml```. 
 
-## ```crosscompute``` ```automate.yml```
-With our virtual environment activated, all that is left for us to do is in our terminal enter and run the following ```crosscompute automate.yml```. 
-
-What happens next? 
+## Running Our Automation
 
 In the terminal you should see ```crosscompute``` fire up and show you a local host address. If your terminal has permission to launch your web browser, your default web browser should have launched. If not, please copy the address in the terminal window, paste and enter into your default web browser.  Your web browser should then show you a link, which when clicked will take you to the automation. 
 
 Then there will be a link for ```input``` and ```output```.  Clicking on ```input``` will take you to a page with numerical input fields. These fields will be pre-populated with the values defined in our ```variables.dictionary``` file.  The more interesting link is the ```output```.  The ```output``` link will take you to the figure generated from running our script with the variables found in the ```variables.dictionary``` file.
 
-At this point we have reached the end of this tutorial. In the next tutorial, we are going to go back to our ```batch configuration``` and assign a ```csv``` file filled with values to be the source of our ```input variables```. By doing this we are not just going to see one graph but one graph for each row of variable values found in the ```.csv``` file. 
+![Runnong our automation](/assets/gifs/RunningAutomationSuccess.gif "running our automation)
+
+Congratulations on completing your first automation with ```CrossCompute Automation Framework```.
+
+At this point we have reached the end of this tutorial. In the next tutorial, we are going to build on this automation. We are going use a ```csv``` file, filled with lots of values for our ```input variables```.  By doing this we are not just going to see one graph but one graph for each row of variable values found in the ```.csv``` file. 
