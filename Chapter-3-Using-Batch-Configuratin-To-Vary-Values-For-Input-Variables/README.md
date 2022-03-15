@@ -70,10 +70,21 @@ Before we continue, let us get a quick recap of what is going on with our ```bat
 
 The first folder, which we configured in the last tutorial, genrally serves as a reference for the automation.  Now in the second folder we are configuring it so that the ```automation``` now has access to more input variables. Key point is that the ```input variables``` are still configured as earlier. The only difference is in the second cofiguration will automate and yield more results rather than one.
 
-With our ```automate.yml``` now configured with the updated ```batches``` configuration, we can go ahead and run the automation.
+![Configuring-batches-section](/assets/gifs/3-batchescongfig.gif "Configuring batches section")
 
 ## Section 6: Create ```datasets``` folder, add ```batches.csv``` file
 
+With our ```automate.yml``` now configured with the updated ```batches``` configuration, we now need to place our ```batches.csv``` inside a new directory called ```datasets```.
+
+![Create-datasets-dir](/assets/gifs/3-mkdirdatasets.gif "Create datasets dir")
+
+To create the ```datasets``` directory, first check you are in the project's root folder. Then you can create a new folder and name it ```datasets```.  
+
+    mkdir datasets
+
+Then we can move the ```batches.csv``` file into this newly created ```datasets``` directory.
+
+![Batches-In-Datasets](/assets/imgs/batchesInDatasets.png "image of batche.csv inside datasets directory")
 
 ## Section 7: Running ```crosscompute automate.yml```
 
