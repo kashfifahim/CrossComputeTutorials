@@ -273,7 +273,7 @@ In the terminal you should see ```crosscompute``` fire up and show you a local h
 
 Then there will be a link for ```input``` and ```output```.  Clicking on ```input``` will take you to a page with numerical input fields. These fields will be pre-populated with the values defined in our ```variables.dictionary``` file.  The more interesting link is the ```output```.  The ```output``` link will take you to the figure generated from running our script with the variables found in the ```variables.dictionary``` file.
 
-![Runnong our automation](/assets/gifs/RunningAutomationSuccess.gif "running our automation)
+![Runninng our automation](/assets/gifs/RunningAutomationSuccess.gif "running our automation")
 
 Congratulations on completing your first automation with ```CrossCompute Automation Framework```.
 
