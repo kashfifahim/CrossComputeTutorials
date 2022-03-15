@@ -199,6 +199,14 @@ At the time of writing this tutorial, ```crosscompute``` needs Python version 3.
 With those three lines, we are done configuring our ```automate.yml``` file. 
 
 ![Creating our automate.yml file](/assets/gifs/Creating%20the%20automate-yml%20file.gif "Creating our automate.yml file")
+
+## Activate ```automation``` virtual environment, run ```crosscompute autoamte.yml```
+
+Up to this point we have our Bike Share model, ```bikeshare.py```, we have our ```run.py``` which we use to program to the model's interface. In the last section, we created our ```automate.yml``` file.  While we are not done setting up our automation, we are going to run ```crosscompute``` with our ```automate.yml``` file.  
+
+Why run that now?  By running it now, ```crosscompute``` will create our automation's folder structure, think of it as a shortcut.
+
+![Run ```crosscompute automate.yml```](/assets/gifs/runCrossComputeAutomate1.gif "Run ```crosscompute automate.yml```")
 ## Check On Our To Do List
 
 Before we go any further, when we were configuring our ```scripts``` section of the ```automate.yml``` file we passed in two placeholder arguments with our command.  Now ```run.py``` will need to access those two placeholder arguments. Let's bring up our ```TO DO``` list and add a couple of more tasks.
