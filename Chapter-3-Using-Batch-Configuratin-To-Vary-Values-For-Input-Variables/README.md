@@ -43,7 +43,7 @@ As promised, for this tutorial we are really going to test the ```crosscompute a
 
 Our ```csv``` file is made up of three attributes, one for each input variable: p1, p2, and num_steps.  The values of ```p1``` and ```p2``` are random floating point numbers between 0.1 and 0.9.  Meanwhile, the values of ```num_steps``` are random integer values between ```10``` and ```60``` representing time intervals in minutes.
 
-## Section 4: Configuring the ```batch configuration```
+## Section 5: Configuring the ```batch configuration```
 
 Next, let's configure the ```batches``` section of our ```automate.yml``` file.  
 
@@ -72,7 +72,10 @@ The first folder, which we configured in the last tutorial, genrally serves as a
 
 With our ```automate.yml``` now configured with the updated ```batches``` configuration, we can go ahead and run the automation.
 
-## Section 5: Running ```crosscompute automate.yml```
+## Section 6: Create ```datasets``` folder, add ```batches.csv``` file
+
+
+## Section 7: Running ```crosscompute automate.yml```
 
 ## Section 6: Inspecting ```batch``` folder
 
