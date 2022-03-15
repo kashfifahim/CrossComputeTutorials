@@ -207,60 +207,23 @@ Up to this point we have our Bike Share model, ```bikeshare.py```, we have our `
 Why run that now?  By running it now, ```crosscompute``` will create our automation's folder structure, think of it as a shortcut.
 
 ![Run ```crosscompute automate.yml```](/assets/gifs/runCrossComputeAutomate1.gif "Run ```crosscompute automate.yml```")
-## Check On Our To Do List
 
-Before we go any further, when we were configuring our ```scripts``` section of the ```automate.yml``` file we passed in two placeholder arguments with our command.  Now ```run.py``` will need to access those two placeholder arguments. Let's bring up our ```TO DO``` list and add a couple of more tasks.
+Let's examine the terminal in the ```gif``` above. 
 
-First, let's review what we already had:
+Once we run ```crosscompute automate.yml``` a webserver on your local machine is created.  That webserver then serves our automation in a browser at the address ```127.0.0.1:7000```.  If we were to click on it, our default web-browser would open to our automation.  However, we're not quite there yet.  In the lines that follow, our machine is telling us that our ```variables.dictionary``` is not found.  That is normal since we have not created it.
 
-    TO DO 
-        [] create an input_folder
-        [] create a variables.dictionary
-        [] declare and assign value to p1, p2, num_steps for first simulation
+On the other hand, look at the project directory.  After running ```crosscompute automate.yml```, ```crosscompute``` creates a new folder for us.  The folder, ```batches/a``` is the one we configured in our ```automate.yml``` file.  Within this folder we find an ```input``` folder, where we will now create and save a ```variables.dictionary``` file and an ```output``` folder, where our simulation's graph will be saved as a ```.png``` file. 
 
-        [] create an output_folder
+Before continuing, we can stop our webserver by pressing the ```ctrl + C``` buttons together on your keyboard.  
+## ```batches > a > variables.dictionary```
 
-Now let's add a few things we need to add to our ```run.py``` script.
+Within the ```batches/a``` folder, let us create a ```variables.dictionary``` file.
 
-    TO DO 
-        To the project structure
-            [] create an input_folder
-            [] create a variables.dictionary
-            [] declare and assign value to p1, p2, num_steps for first simulation
+![create variables.dictionary](/assets/gifs/create-var-dic-2.gif "create variables.dictionary")
 
-            [] create an output_folder
+What about creating an ```output_folder```?  As you saw earlier, from running ```crosscompute automate.yml```, ```crosscompute``` created the folder structures for our project.  We have our ```input``` folder, which now holds the ```variables.dictionary``` file. Once our automation is successfully run, the ```output``` folder will be where we will have our image output.
 
-        To run.py:
-            [] create variables ```input_folder``` and ```output_folder```
-            [] assign values to ```input_folder``` and ```output_folder``` through ```argv```
-            [] create a variable called ```variables``` that will connect to the ```variables.dictionary```
-            [] replace each of the three input variables ```p1```, ```p2```, and ```num_steps``` with corresponding variables from ```variables.dictionary```
-            - [ ] Save ```fig``` to the ```output_folder```
-
-Before running out automation, let us complete these quick tasks from our ```TO DO``` list. 
-
-### Tasks For The Project Structure.
-
-First lets create an input_folder, then within it, let's create a ```variables.dictionary``` file.
-
-![Create variables.dictionary within the input_folder folder inside project folder](/assets/gifs/Create-variables-dictioanry.gif "Create variables.dictionary within the input_folder folder inside project folder")
-
-Let us not forget the second folder, ```output_folder```. Make sure you are inside the root folder of your project folder, then create the ```output_folder```. 
-
-![Create an output_folder](/assets/gifs/CreateOutputFolder.gif "Create an output_folder")
-
-Once we have created out ```variables.dictionary``` inside the ```input_folder```, we can then create a ```output_folder```.  With that, we are done with out tasks for the project structure.
-
-Let us move on to the tasks for ```run.py```.
-
-### Tasks for ```run.py```
-
-
-After these quick modifications we will be two commands away from automation using the ```crosscompute automation framework```.
-
-### Changes to Project Structure: Adding input_folder, output_folder
-
-### Creating a variables.dictionary with p1, p2, num_steps
+Let us now move on to updating our ```run.py```.
 
 ### Modifying run.py
 
