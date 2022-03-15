@@ -26,6 +26,8 @@ As mentioned earlier, we have our ```bikeshare.py``` file that holds the functio
 
 ![Inside of batches folder](/assets/gifs/ch301.gif "Inside of batches")
 
+When we configured the ```batches```section of our ```automate.yml``` file, we configured the creation of a folder called ```a```.  So inside ```batches``` we first have ```a```.  Then when we open ```a``` we see the folders ```debug```, ```input```, ```log```, and ```output```.  They key folders of interest are ```input```, where we have our ```variables.dictionary``` file, and the ```output``` folder, which holds the saved image of the figure generated from the simulation.
+
 ## Section 2: A little about batch configuration to vary values for input variables
 
 In the last tutorials,[](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
