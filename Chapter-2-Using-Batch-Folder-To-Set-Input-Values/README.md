@@ -160,21 +160,18 @@ The last detail to configure, just like we did for ```input```, we need to give 
       view: image
         path: simulation-graph.png
 
-While that completes our configuration of the ```output``` section of the ```automate.yml``` file, like before with the ```input``` configuration, we are going to need to add some tasks to our running ```TO DO``` list. Luckily, the ```output_variable``` will be the result of the automation. So we just need to create the ```output_folder```.
-
-    TO DO 
-            [] create an input_folder
-            [] create a variables.dictionary
-            [] declare and assign value to p1, p2, num_steps for first simulation
-
-            [] create an output_folder
-
 At this point, be sure to save your ```automate.yml``` file.  We are now going to move on to configuring the ```batches``` section of our ```automate.yml``` file.
 
 ### ```automate.yml``` > ```batches configuration``` section
 The next section we must configure for our automation is the ```batches``` section.  Up to this point we've defined our ```metadata```, our ```input configuration```, and our ```output_cofiguration```.  The ```batch configuration``` is where ```crosscompute``` shows off its ease of use. 
 
-For the ```batch configuration``` there are three key use cases. The first is to define a batch folder from which a set of values for your input variables can be found. The second use case is providing a ```batch configuration``` where an assorted amount of variable values can be provided to the automation through, for example, a simple ```csv``` file. Finally, in the third use case, we can use a reference folder with a set of default values. Those default values can then be used to fill in missing values for variables while shifting and changing selected variables. 
+For the ```batch configuration``` there are three key use cases. 
+
+The first use case is to define a batch folder from which a set of values for your input variables can be found. 
+
+The second use case is providing a ```batch configuration``` where an assorted amount of variable values can be provided to the automation through, for example, a simple ```csv``` file. 
+
+Finally, in the third use case, we can use a reference folder with a set of default values. Those default values can then be used to fill in missing values for variables while shifting and changing selected variables. 
 
 In our current tutorial, we are working on the first use case of just defining a ```folder``` in the ```batch``` configuration section where our ```variables.dictionary``` will be stored. After declaring the batch section with ```batches:```, in the following line, after an indent, we're going to set the ```folder``` attribute to ```batches/a```. This means that within the current project directory we will need a folder called ```batches``` which has a subfolder within it called ```a```.  Feel free to set the folder name to anything you wish, just make sure to create the folder and subfolder with the same names.
 
