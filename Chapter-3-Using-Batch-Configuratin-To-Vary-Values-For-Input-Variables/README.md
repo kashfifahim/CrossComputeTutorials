@@ -12,6 +12,11 @@ We then made some modifications to our ```run.py``` for connecting our inputs to
 
 Finally, when we ran our automation ```crosscompute``` launched a server in our local machine.  ```Crosscompute``` then served the automation in the form of a web based report.  Within this report we could see the inputs used for the automation as well as the output, an image of the activity chart used to represent our simulation. Now, in this chapter, we are going to build on everything from the previous tutorial.  
 
+The key difference between the introductory tutorial and this current tutorial hinges on one idea: a lot more input varaibles.  What we are going to work on in this tutorial is take the same model but now feed it a hundred more input variable.  In return, we are going to expect a hundred more outputs in the form of a hundred activity figures, saved as a ```.png``` file.    
+
+Let's get started.
+## Section 2:  
+
 
 ## Section 2: A little about batch configuration to vary values for input variables
 
