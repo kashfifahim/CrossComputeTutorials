@@ -15,7 +15,12 @@ Finally, when we ran our automation ```crosscompute``` launched a server in our 
 The key difference between the introductory tutorial and this current tutorial hinges on one idea: a lot more input varaibles.  What we are going to work on in this tutorial is take the same model but now feed it a hundred more input variable.  In return, we are going to expect a hundred more outputs in the form of a hundred activity figures, saved as a ```.png``` file.    
 
 Let's get started.
-## Section 2:  
+
+## Section 2: What's In Our Project Folder
+
+To start off, let us review the contents of our project folder.  What do we have?
+
+![Image of project starter files](/assets/imgs/Ch3Start.png "Project starter files")
 
 
 ## Section 2: A little about batch configuration to vary values for input variables
