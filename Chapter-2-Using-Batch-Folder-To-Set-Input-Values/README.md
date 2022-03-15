@@ -275,10 +275,21 @@ Next, we are going to use the ```json``` library to import the data from our ```
 
     variables = json.load(open(join(input_folder, 'variables.dictionary), 'rt'))
 
-Finally, let's connect the data to our simulation. We will replace the second, third, and fourth arguments in our call to ```run_simulation``` with the correspoinding data found in our variables.dictionary file.
+Now, let's connect the data to our simulation. We will replace the second, third, and fourth arguments in our call to ```run_simulation``` with the correspoinding data found in our variables.dictionary file.
 
     results = run_simulation(bikeshare, variables["p1"], variables["p2"], variables["num_steps"])
 
+![connect variables.dictionary to our simulation](/assets/gifs/ConnectVariablesDictionary.gif "Connect variables.dictionary to our simulation")
+
+We have just one more task to complete for our ```run.py``` file.   Just as we specified to load the data from the ```input_folder``` we need to now tell the script to save the figure image to the ```output_folder```.  For this we go to the last line of ```run.py``` where we have:
+
+  plt.savefig(join(".", "simulation-graph.png"))
+
+We need to change it so that it does not save to the root folder as it currently does.  Instead we are going to tell the script to save to the ```output_folder```. 
+
+    plt.savefig(join(output_folder, "simulation-graph.png"))
+
+![Save to output_folder](/assets/gifs/SaveToOutputFolder.gif "Save to output_folder")
 ## Ready For Launch
 
 With our ```automate.yml``` file ready to go, our project structure with correct contents in place, now is a good time to activate the virtual environment. [We will be using the virtual environment created in the previous tutorial](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute), that holds the ```crosscompute``` package.  Refer to the ["How to Install CrossCompute"](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute) tutorial for an in depth walkthrough on how to set up your virtual environment. 
