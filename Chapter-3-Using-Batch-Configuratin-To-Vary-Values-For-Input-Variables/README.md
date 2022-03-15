@@ -2,7 +2,16 @@
 
 ## Section 0: Summary
 
-## Section 1: Recap
+## Section 1: Recap of Tutorial 1
+
+In the first chapter, we were introduced to the model of our Bike Share System, ```bikeshare.py```.  We then created ```run.py``` that would act as the brains of our automation.  ```run.py``` connected to the interface of our model, while also connecting to the ```crosscompute automation framework``` via the ```automate.yml``` file. 
+
+Speaking of our ```yml``` file, in the last tutorial we configured the four essential sections of the file: the meta-section, the input and output configuration, the batch configuration section, and finally the script configuration. 
+
+We then made some modifications to our ```run.py``` for connecting our inputs to the functions found in ```bikeshare.py```.  
+
+Finally, when we ran our automation ```crosscompute``` launched a server in our local machine.  ```Crosscompute``` then served the automation in the form of a web based report.  Within this report we could see the inputs used for the automation as well as the output, an image of the activity chart used to represent our simulation. Now, in this chapter, we are going to build on everything from the previous tutorial.  
+
 
 ## Section 2: A little about batch configuration to vary values for input variables
 
