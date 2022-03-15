@@ -28,14 +28,14 @@ As mentioned earlier, we have our ```bikeshare.py``` file that holds the functio
 
 When we configured the ```batches```section of our ```automate.yml``` file, we configured the creation of a folder called ```a```.  So inside ```batches``` we first have ```a```.  Then when we open ```a``` we see the folders ```debug```, ```input```, ```log```, and ```output```.  They key folders of interest are ```input```, where we have our ```variables.dictionary``` file, and the ```output``` folder, which holds the saved image of the figure generated from the simulation.
 
-## Section 2: A little about batch configuration to vary values for input variables
+## Section 3: A little about batch configuration to vary values for input variables
 
 In the last tutorials,[](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
 
-In this tutorial, we are going to build up on the first ```batch configuration```.  We are now going to provide our automation with a path to a ```csv``` file. This ```csv``` file will not hold one set of values for our ```input variables``` but will hold a dozen set of values. For each dozen set of values, the automation will yield and record a simulation in the form of a graph saved as a ```.png``` image. Our ```automation``` will also manage the ```output_folder``` by creating a folder for each set of output images.
+In this tutorial, we are going to build up on the first ```batch configuration```.  We are now going to provide our automation with a path to a ```batches.csv``` file. This ```csv``` file will not just hold one set of values for our ```input variables``` but will hold a hundred set of values. The automation will then yield, for each row of our ```batches.csv``` file, and record a simulation. Our ```automation``` will also manage the ```output_folder``` by creating a folder for each set of output images.
 
 Let's get started.
-## Section 3: Starting from last tutorial
+## Section 4: A Look At Our ```batches.csv``` File
 
 ## Section 4: Configuring the ```batch configuration```
 
@@ -46,8 +46,7 @@ In our last tutorial, [](), we configured the ```batches``` section with a folde
     # batches configuration
     batches:
       - folder: batches/a
-    
-       - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+      - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
 
 Our folder name here contains placeholder variables.  Why is that?  This is so that our folder structure can be linked to the set of input values our automation used from the ```.csv``` file.  
 
@@ -61,7 +60,9 @@ Next, we are going to provide our folder with ```configuration``` attribute whic
         configuration:
           path: datasets/batches.csv
 
-A quick recap of what is going on with our ```batches``` configuration.  The first folder, which we configured in the last tutorial, genrally serves as a reference for the automation.  Now in the second folder we are configuring it so that the ```automation``` now has access to more input variables. Key point is that the ```input variables``` are still the same kind as configured earlier in the first folder. The only difference is in the second cofiguration will automate and yield more results rather than one.
+Before we continue, let us get a quick recap of what is going on with our ```batches``` configuration.  
+
+The first folder, which we configured in the last tutorial, genrally serves as a reference for the automation.  Now in the second folder we are configuring it so that the ```automation``` now has access to more input variables. Key point is that the ```input variables``` are still configured as earlier. The only difference is in the second cofiguration will automate and yield more results rather than one.
 
 With our ```automate.yml``` now configured with the updated ```batches``` configuration, we can go ahead and run the automation.
 
