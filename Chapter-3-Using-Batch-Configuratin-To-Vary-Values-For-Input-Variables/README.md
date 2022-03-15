@@ -22,6 +22,9 @@ To start off, let us review the contents of our project folder.  What do we have
 
 ![Image of project starter files](/assets/imgs/Ch3Start.png "Project starter files")
 
+As mentioned earlier, we have our ```bikeshare.py``` file that holds the functions needed to run our simulation.  Then we have our ```run.py``` file and our ```automate.yml``` file. We also have a folder called ```batches```.  What's inside of that folder?
+
+![Inside of batches folder](/assets/gifs/ch301.gif "Inside of batches")
 
 ## Section 2: A little about batch configuration to vary values for input variables
 
