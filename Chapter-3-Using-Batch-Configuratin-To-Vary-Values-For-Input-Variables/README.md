@@ -30,7 +30,7 @@ When we configured the ```batches```section of our ```automate.yml``` file, we c
 
 ## Section 3: A little about batch configuration to vary values for input variables
 
-In the last tutorials,[](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
+In the last tutorials, we had a minimal configuration in the ```batches``` section of our ```automate.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
 
 In this tutorial, we are going to build up on the first ```batch configuration```.  We are now going to provide our automation with a path to a ```batches.csv``` file. This ```csv``` file will not just hold one set of values for our ```input variables``` but will hold a hundred set of values. The automation will then yield, for each row of our ```batches.csv``` file, and record a simulation. Our ```automation``` will also manage the ```output_folder``` by creating a folder for each set of output images.
 
