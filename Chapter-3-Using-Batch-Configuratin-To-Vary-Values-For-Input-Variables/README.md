@@ -37,6 +37,12 @@ In this tutorial, we are going to build up on the first ```batch configuration``
 Let's get started.
 ## Section 4: A Look At Our ```batches.csv``` File
 
+As promised, for this tutorial we are really going to test the ```crosscompute autoamtion framework``` by asking it to automate one hundred rows of data from a ```batches.csv```.  
+
+![100-rows-of-data](/assets/gifs/100-batches-csv.gif "100-rows-of-data")
+
+Our ```csv``` file is made up of three attributes, one for each input variable: p1, p2, and num_steps.  The values of ```p1``` and ```p2``` are random floating point numbers between 0.1 and 0.9.  Meanwhile, the values of ```num_steps``` are random integer values between ```10``` and ```60``` representing time intervals in minutes.
+
 ## Section 4: Configuring the ```batch configuration```
 
 Next, let's configure the ```batches``` section of our ```automate.yml``` file.  
