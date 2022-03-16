@@ -88,6 +88,20 @@ Then we can move the ```batches.csv``` file into this newly created ```datasets`
 
 ## Section 7: Running ```crosscompute automate.yml```
 
+Up to now, we added a new configuration to our ```batches``` section.  We created a new folder ```datasets``` that holds our ```batches.csv``` file.  Now, we are ready to run our automation. 
+
+Before running our automation, first check which folder you are currently in.  If you are still inside the ```datasets``` folder, change your directory and move up one level to the project folder directory that holds the ```automate.yml``` file.  Then once you are in your project's root directory, activate your ```virtual environment``` and then run ```crosscompute automate.yml```.
+
+What should you be seeing?  Once you run ```crosscompute automate.yml```, you will first see an address where the web-app of your automation can be accessed via your localhost.  When you open your browser to that address, you will see a list of each automation with its ```input``` and ```output```.
+
+![web-app-view](/assets/gifs/3-webappview.gif "web-app view of automation")
+
+Meanwhile, in your project folder you will star to see the ```batches``` folder be populated with new folders. Each one is a completed simulation with the ```input``` variables sourced from our ```batches.csv``` file and an ```output``` image.  Once the automation completes your batches folder will hold 101 folders.
+
+![run-automation-folder](/assets/gifs/3-runautomation.gif "run-automation")
+
+![101-folder](/assets/imgs/100%20folders.png "101 folder")
+
 ## Section 6: Inspecting ```batch``` folder
 
 ## Section 7: Conclusion
