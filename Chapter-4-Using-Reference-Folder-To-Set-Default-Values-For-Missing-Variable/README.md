@@ -4,13 +4,15 @@
 
 ## Section 1: Recap
 
+First, we discovered how to configure our automation with a simple dataset.  Then, we found out how to work with a dataset made up of one hundred rows of input variables.     
+
 ## Section 2: A little about using reference folder to set default values for missing variables
 
-The last tutorials, we used batches for different purposes.  In the first tutorial, [](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
+Up to now we have learnd how to set up our automation with ```crosscompute automation framework```.  At the heart of our automations are our ```batch configurations```.  We used batches for different purposes.  In the first tutorial, [](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
 
 In the second tutorial, [](), we built up on the first ```batch configuration```.  We now provided our automation with a path to a ```csv``` file that had many more sets of input variables. From that ```csv``` file, we wanted our automation to yield a simulation for each set of input data.
 
-Now, in this third tutorial, we are going to build up on the prior two ```batch configuration```.  Here we are going to keep one of the three variables with a constant value, ```60```. In other words, we are going to isolate one variable and vary the other two. 
+Now, in this third tutorial, we are going to build up on the prior two ```batch configuration```.  In this tutorial, we are going to explore how we can configure our automation to handle missing values for our variables.  
 
 This ```batch configuration``` is meant to allow you to dig deeper into your data. By isolating one variable, you can now observe and record trends from varying the other two variables.  
 
@@ -35,28 +37,28 @@ From our previous work, our ```batches``` section has the following configuratio
 
     # batches configuration
     batches:
-        - folder: batches/a
+      - folder: batches/a
     
-        - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
-          configuration:
-            path: datasets/batches.csv
+      - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+        configuration:
+          path: datasets/batches.csv
 
 Now we are going to add our third folder. Then add a ```reference``` attribute to the folder. The ```reference``` here will point to our first folder configuration where the three ```input_variables``` are sourced from the ```variables.dictionary```. along with a ```path``` to the location of the ```csv``` file with only sets of values for the ```p1``` and ```p2``` ```input_variables```.
 
 
     # batches configuration
     batches:
-        - folder: batches/a
+      - folder: batches/a
     
-        - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
-          configuration:
-            path: datasets/batches.csv
+      - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+        configuration:
+          path: datasets/batches.csv
         
-        - folder: batches/p1{p1}-p2{p2}-numsteps-ref
-          reference:
-            folder: batches/a
-          configuration:
-            path: datasets/batches-p1-p2.csv
+      - folder: batches/p1{p1}-p2{p2}-numsteps-ref
+        reference:
+          folder: batches/a
+        configuration:
+          path: datasets/batches-p1-p2.csv
 
 
 
