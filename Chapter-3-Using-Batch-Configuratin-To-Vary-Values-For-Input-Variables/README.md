@@ -102,6 +102,4 @@ Meanwhile, in your project folder you will star to see the ```batches``` folder 
 
 ![101-folder](/assets/imgs/100%20folders.png "101 folder")
 
-## Section 6: Inspecting ```batch``` folder
-
-## Section 7: Conclusion
+## Section 8: Conclusion
