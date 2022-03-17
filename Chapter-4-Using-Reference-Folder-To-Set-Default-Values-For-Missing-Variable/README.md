@@ -16,7 +16,7 @@ In this tutorial, once again, we are going to build on our last tutorial.  We ar
 
 With that said, let's get started.
 
-## Section 2: A little about using reference folder to set default values for missing variables
+## Section 3: A little about using reference folder to set default values for missing variables
 
 Up to now we have learnd how to set up our automation with ```crosscompute automation framework```.  At the heart of our automations are our ```batch configurations```.  We used batches for different purposes.  In the first tutorial, [](), we had a minimal configuration in the ```batches``` section of our ```automat.yml``` file.  The reason for that was because we just wanted our simulation to be automated for one set of data. That lone set of data was stored in a ```variables.dictionary``` file within the ```/batches/a/input``` folder. 
 
@@ -27,9 +27,9 @@ Now, in this third tutorial, we are going to build up on the prior two ```batch 
 This ```batch configuration``` is meant to allow you to dig deeper into your data. By isolating one variable, you can now observe and record trends from varying the other two variables.  
 
 Let's get started.
-## Section 3: Picking up from previous tutorial
+## Section 4: Picking up from previous tutorial
 
-## Section 4: Configuring the ```batch configuration```
+## Section 5: Configuring the ```batch configuration```
 
 Let us go to the ```batches``` section of our ```automate.yml``` file.  
 
@@ -72,8 +72,8 @@ Now we are going to add our third folder. Then add a ```reference``` attribute t
 
 
 
-## Section 5: Running ```crosscompute automate.yml```
+## Section 6: Running ```crosscompute automate.yml```
 
-## Section 6: Inspecting the ```batch``` folder
+## Section 7: Inspecting the ```batch``` folder
 
-## Section 7: Conclusion
+## Section 8: Conclusion
