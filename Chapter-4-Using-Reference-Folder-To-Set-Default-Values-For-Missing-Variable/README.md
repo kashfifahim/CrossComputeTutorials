@@ -4,7 +4,17 @@
 
 ## Section 1: Recap
 
-First, we discovered how to configure our automation with a simple dataset.  Then, we found out how to work with a dataset made up of one hundred rows of input variables.     
+Up to now, we discovered how we can use the ```crosscompute automation framework``` to configure an automation with a simple dataset.  Then, we found out how it can work with a dataset made up of one hundred rows of input variables.  Now in this tutorial, we are going to see how the ```crosscompute automation framework``` can manage datasets with missing variables.
+
+## Section 2: Introduction
+
+Up to now our automation requires three input variables. The first pair of input variables, ```p1``` and```p2```, simulate customers deciding to use, wait, or pass on using our the Bike Share System. Then we have our third input variable, ```num_steps```, that simulates a block of time, in minutes.  
+
+For our given simulation, varying values for ```p1``` and ```p2``` would be beneficial for a team to simulate as many cases that simulate the random decision of a simulated customer.  One can then argue that varying ```num_steps``` may not yield any valuable insights for an analyst. 
+
+In this tutorial, once again, we are going to build on our last tutorial.  We are going to take our ```batches.csv``` dataset and take out all the varied values of ```num_steps```.  In its place, we are going to set ```num_steps``` to one value of ```60```.  In a sense this will allow us to focus our simulation, zoom in to specific scenario, returning invaluable insights into the possible decision making of the customers.
+
+With that said, let's get started.
 
 ## Section 2: A little about using reference folder to set default values for missing variables
 
