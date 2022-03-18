@@ -1,4 +1,6 @@
 # Chapter 2: Using Batch Folder to Set Input Values
+
+![Runninng our automation](/assets/gifs/RunningAutomationSuccess.gif "running our automation")
 ## Introduction to the simulation
 
 Your company has taken on a new project.  The stakeholders want to implement a bike sharing system between the campus of Wellesley College and the campus of Olin College of Engineering. Your team has been tasked with writing a program that simulates this system.  
@@ -276,4 +278,4 @@ At this point we have reached the end of this tutorial. In the next tutorial, we
 
 This concludes the second tutorial introducing you to the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
 
-The Bike Share Simulation is inspired by the simulation from Allen B. Downey's course on Models and Simulation.
+The Bike Share Simulation was inspired by the simulation of the same name from Allen B. Downey's course on Models and Simulation.

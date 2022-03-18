@@ -1,6 +1,7 @@
 # Chapter 4: Using Reference Folder to Set Default Values for Missing Variable
 
-## Section 0: Summary
+![TerminalView](/assets/gifs/Ch4ViewFromTerminal.gif "Terminal view")
+![BrowserView](/assets/gifs/Ch4BrowserView.gif "Browser View")
 
 ## Section 1: Recap
 
@@ -114,4 +115,4 @@ With just a few modifications to our ```automate.yml``` file, the ```crosscomput
 
 This concludes the fourth tutorial introducing you to the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
 
-The Bike Share Simulation is inspired by the simulation from Allen B. Downey's course on Models and Simulation.
+The Bike Share Simulation was inspired by the simulation of the same name from Allen B. Downey's course on Models and Simulation.
