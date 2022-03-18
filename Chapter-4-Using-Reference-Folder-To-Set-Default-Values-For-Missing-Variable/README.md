@@ -30,6 +30,7 @@ Let's get started.
 ## Section 4: Picking up from previous tutorial
 
 ![Ch4Starter](/assets/gifs/Ch4Starter.gif "Chapter 4 Starter")
+
 Let us take a quick look at our project to see what we should all have at the start of this tutorial.  
 
 Within our project folder we should have our ```automate.yml``` file, the model of our simulation in ```bikeshare.py```, and a controller script in ```run.py```. Then, we should have a folder called ```datasets``` within which we should have a couple of files, ```batches.csv```--from the last tutorial--and ```batches2variables.csv``` which we will use in this tutorial.  Jumping back to the project folder, we should also have a folder called ```batches```, within which is another folder which was titled ```a``` and within that folder is where our ```variables.dictioanry``` file is located.  This ```variables.dictioanry``` file will play a key role in this tutorial so please make sure it is there. All these files and folders were created with a thorough walkthrough of their contents in the previous two tutorials, so if you are just joining this tutorial, please complete the earlier two tutorial before starting this one.
