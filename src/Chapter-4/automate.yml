@@ -1,0 +1,53 @@
+---
+# version of crosscompute
+crosscompute: 0.9.1
+
+# name of your automation
+name: Olin-Wellesley Bike Share System
+
+# version of your automation
+version: 0.0.1
+
+# input configuration
+input:
+  # input variables
+  variables:
+    - id: p1
+      view: number
+      path: variables.dictionary
+    - id: p2
+      view: number
+      path: variables.dictionary
+    - id: num_steps
+      view: number
+      path: variables.dictionary 
+
+# output configuration
+output:
+  variables:
+    - id: simulation_graph
+      view: image
+      path: simulation-graph.png
+
+# batches configuration
+batches:
+  - name: 'simple'
+    folder: batches/a
+
+  # - name: '{p1} {p2} {num_steps}'
+  #   folder: batches/{p1}-{p2}-{num_steps}
+  #   configuration:
+  #     path: datasets/batches.csv
+
+  - folder: batches/p1{p1}-p2{p2}
+    reference:
+      folder: batches/a
+    configuration:
+      path: datasets/batches2variables.csv
+
+# script configuration
+scripts:
+  - command: python3.9 run.py {input_folder} {output_folder}
+
+# Done with automate.yml
+
