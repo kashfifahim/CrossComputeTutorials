@@ -178,3 +178,7 @@ The next time you want to activate the ```automation``` environment, enter the f
     source LOCATION_OF_YOUR_AUTOMATION_FOLDER\bin\activate
 
 You and your machine are now ready to continue on to the next tutorials.
+
+This concludes the first tutorials introducing you to the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
+
+The Bike Share Simulation is inspired by the simulation from Allen B. Downey's course on Models and Simulation.
