@@ -1,6 +1,4 @@
 # Chapter 2: Using Batch Folder to Set Input Values
-## Section 0: Summary -- What you will need, what you will get done by the end of the tutorial, who to reach out if you are having problems
-
 ## Introduction to the simulation
 
 Your company has taken on a new project.  The stakeholders want to implement a bike sharing system between the campus of Wellesley College and the campus of Olin College of Engineering. Your team has been tasked with writing a program that simulates this system.  
@@ -275,3 +273,7 @@ Then there will be a link for ```input``` and ```output```.  Clicking on ```inpu
 Congratulations on completing your first automation with ```CrossCompute Automation Framework```.
 
 At this point we have reached the end of this tutorial. In the next tutorial, we are going to build on this automation. We are going use a ```csv``` file, filled with lots of values for our ```input variables```.  By doing this we are not just going to see one graph but one graph for each row of variable values found in the ```.csv``` file. 
+
+This concludes the first tutorial introducing you to the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
+
+The Bike Share Simulation is inspired by the simulation from Allen B. Downey's course on Models and Simulation.
