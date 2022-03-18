@@ -38,9 +38,13 @@ Within our project folder we should have our ```automate.yml``` file, the model 
 All these files and folders were created with a thorough walkthrough of their contents in the previous two tutorials, so if you are just joining this tutorial, please complete the earlier two tutorial before starting this one.
 ## Section 5: Configuring the ```batch configuration```
 
-Let us go to the ```batches``` section of our ```automate.yml``` file.  
+Our goal for this automation is from the three variables, ```p1```, ```p2```, ```num_steps```, that our model requires, we are going to keep one of the variables to a single value of ```60```. Then we are going to plug a new ```batches2variables.csv``` data source that only has values for ```p1``` and ```p2```.  
 
-In the previous tutorila, [](), we configured the ```batches``` section with two folder.  The first folder was configured to hold a singel set of ```input variables``` that were pulled from the ```variables.dictionary```.  The second folder built on top of that first folder by now providing the ```automation``` with a ```csv``` file that provided the ```automation``` with more sets of values for our ```input_variables```.  The second folder configuration also organized the output folders with the variable name and value that was used, ```p1{p1}-p2{p2}-numstes{num_steps}```.
+How are we going to set ```num_steps``` to a single value of ```60```?  We are going to use the ```variables.dictionary``` file to assign to ```num_steps``` the value of ```60```.  With this simple assignment, whenvever our automation comes upon the variable ```num_steps``` it is going to automatically use the value first initialized in ```variables.dictionary```. With the ```CrossCompute Automation Framework``` it is really that simple to keep a variable fixed with a single value. 
+
+Next, let us go to the ```batches``` section of our ```automate.yml``` file.  
+
+In the previous tutorila, [](), we configured the ```batches``` section with two folder.  The first folder was configured to hold a singel set of ```input variables``` that were pulled from the ```variables.dictionary```.  The second folder built on top of that first folder by now providing the ```automation``` with a ```csv``` file that provided the ```automation``` with more sets of values for our ```input_variables```.  The second folder configuration also organized the output folders with the variable name and value that was used, ```p1{p1}-p2{p2}-numsteps{num_steps}```.
 
 Now, we are going to keep those two earlier configurations and add to it.  We're going to add another folder configuration, and another ```csv``` file.  However, instead of the ```csv``` file having three variables this time our ```csv``` file will only have two of the three variables. 
 
@@ -60,26 +64,49 @@ From our previous work, our ```batches``` section has the following configuratio
         configuration:
           path: datasets/batches.csv
 
-Now we are going to add our third folder. Then add a ```reference``` attribute to the folder. The ```reference``` here will point to our first folder configuration where the three ```input_variables``` are sourced from the ```variables.dictionary```. along with a ```path``` to the location of the ```csv``` file with only sets of values for the ```p1``` and ```p2``` ```input_variables```.
+Let's first comment out the second folder and it's configurations.  Then, we are going to add our third folder. Within this third folder, add a ```reference``` attribute to the folder. The ```reference``` here will point to our first folder configuration where the three ```input_variables``` are sourced from the ```variables.dictionary```. along with a ```path``` to the location of the ```csv``` file with only sets of values for the ```p1``` and ```p2``` ```input_variables```.
 
 
     # batches configuration
     batches:
       - folder: batches/a
     
-      - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
-        configuration:
-          path: datasets/batches.csv
+      # - folder: batches/p1{p1}-p2{p2}-numsteps{num_steps}
+      # configuration:
+      #  path: datasets/batches.csv
         
-      - folder: batches/p1{p1}-p2{p2}-numsteps-ref
+      - folder: batches/p1{p1}-p2{p2}
         reference:
           folder: batches/a
         configuration:
-          path: datasets/batches-p1-p2.csv
+          path: datasets/batches2variables.csv
 
-
+With just those simple configuration updates to our ```automate.yml``` file, we are ready to run our automation.
 
 ## Section 6: Running ```crosscompute automate.yml```
+Once you are ready to run your automation, activate the virtual environment.  This is the virtual environment where you set up and installed the ```crosscompute``` package. You will know that your virtual environment is running when the name of your virtual environment is shown in parenthesis on your command line interface.
+
+  ```bash
+  (automation) kashfifahim@crosscompute BikeShare %
+  ```
+
+Then make sure that you are in the root of your project folder. Once there, you can now run ```crosscompute``` with your ```automate.yml``` file.
+
+  ```bash
+  (automation) kashfifahim@crosscompute BikeShare % crosscompute automate.yml
+  ```
+
+In your terminal, you should see the automation process the first batch configuration ```batches/a```.  From this first run, our missing variable, ```num_steps``` will be intialized to our value of ```60```.  
+
+Next, ```crosscompute``` is going to create and serve our automation from a server in our local machine.
+
+After that, in your terminal window, you will see each set of values from our ```batches2variables.csv``` file being processes and then served.
+
+![TerminalView](/assets/gifs/Ch4ViewFromTerminal.gif "Terminal view")
+
+The image below shows our ```automation``` from the browser.
+
+![BrowserView](/assets/gifs/Ch4BrowserView.gif "Browser View")
 
 ## Section 7: Inspecting the ```batch``` folder
 
