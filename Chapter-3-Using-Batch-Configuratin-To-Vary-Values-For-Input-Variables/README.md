@@ -103,6 +103,6 @@ Meanwhile, in your project folder you will star to see the ```batches``` folder 
 ## Section 8: Conclusion
 With that we have completed our automation of simulating 100 rows of data.
 
-This concludes the second tutorial in this introductory set of tutorials on the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
+This concludes the third tutorial in this introductory set of tutorials on the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
 
 The Bike Share Simulation is inspired by the simulation from Allen B. Downey's course on Models and Simulation.
