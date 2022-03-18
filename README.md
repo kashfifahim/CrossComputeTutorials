@@ -10,6 +10,6 @@
 
 ![run-automation-folder](/assets/gifs/3-runautomation.gif "run-automation")
 
-## - [Chapter 4: Useing Reference Folder to Set Default Values for Missing Variables](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-4-Using-Reference-Folder-To-Set-Default-Values-For-Missing-Variable)
+## - [Chapter 4: Using Reference Folder to Set Default Values for Missing Variables](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-4-Using-Reference-Folder-To-Set-Default-Values-For-Missing-Variable)
 
 ![TerminalView](/assets/gifs/Ch4ViewFromTerminal.gif "Terminal view")
