@@ -1,7 +1,5 @@
 # Chapter 3: Using Batch Configuration to Vary Values For Input Variables
 
-## Section 0: Summary
-
 ## Section 1: Recap of Tutorial 1
 
 In the first chapter, we were introduced to the model of our Bike Share System, ```bikeshare.py```.  We then created ```run.py``` that would act as the brains of our automation.  ```run.py``` connected to the interface of our model, while also connecting to the ```crosscompute automation framework``` via the ```automate.yml``` file. 
@@ -103,3 +101,8 @@ Meanwhile, in your project folder you will star to see the ```batches``` folder 
 ![101-folder](/assets/imgs/100%20folders.png "101 folder")
 
 ## Section 8: Conclusion
+With that we have completed our automation of simulating 100 rows of data.
+
+This concludes the second tutorial in this introductory set of tutorials on the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
+
+The Bike Share Simulation is inspired by the simulation from Allen B. Downey's course on Models and Simulation.
