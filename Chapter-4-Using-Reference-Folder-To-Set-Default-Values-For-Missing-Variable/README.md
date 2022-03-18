@@ -112,6 +112,6 @@ The image below shows our ```automation``` from the browser.
 
 With just a few modifications to our ```automate.yml``` file, the ```crosscompute automation framework``` was able to compute another 100 rows of data. More interestingly, this time around, it still processed all three input variables required by our model ```bikeshare.py```, but by initializing our ```variables.dictionary``` to a default value of ```60```, wihtout missing a beat the automation framework processed our automation flawlessly.
 
-This concludes the first set of tutorials introducing you to the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
+This concludes the fourth tutorial introducing you to the CrossCompute Automation Framework. If you have any questions, comments, or would like to reach out to us about helping you automate today reach out to us at ```contact@crosscompute.com```.  
 
 The Bike Share Simulation is inspired by the simulation from Allen B. Downey's course on Models and Simulation.
