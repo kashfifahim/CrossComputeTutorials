@@ -1,3 +1,5 @@
+![CrossCompute](/assets/imgs/CrossCompute-LogoBrand-Horizontal-20200420.svg "CrossCompute Logo")
+
 # CrossCompute Tutorials
 
 ## - [Chapter 1: How to Install CrossCompute](https://github.com/kashfifahim/CrossComputeTutorials/tree/main/Chapter-1-How-To-Install-CrossCompute)
