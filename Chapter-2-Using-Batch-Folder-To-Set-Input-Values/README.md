@@ -1,3 +1,4 @@
+![CrossCompute Logo](https://crosscompute.com/images/CrossCompute-LogoBrand-Horizontal-20200420.svg "CrossCompute logo")
 # Chapter 2: Using Batch Folder to Set Input Values
 
 ![Runninng our automation](/assets/gifs/RunningAutomationSuccess.gif "running our automation")
