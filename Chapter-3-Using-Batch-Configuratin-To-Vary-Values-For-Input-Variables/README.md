@@ -1,3 +1,4 @@
+![CrossCompute Logo](https://crosscompute.com/images/CrossCompute-LogoBrand-Horizontal-20200420.svg "CrossCompute logo")
 # Chapter 3: Using Batch Configuration to Vary Values For Input Variables
 
 ![run-automation-folder](/assets/gifs/3-runautomation.gif "run-automation")
