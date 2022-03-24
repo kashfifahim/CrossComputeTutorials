@@ -1,3 +1,4 @@
+![CrossCompute Logo](https://crosscompute.com/images/CrossCompute-LogoBrand-Horizontal-20200420.svg "CrossCompute logo")
 # Chapter 4: Using Reference Folder to Set Default Values for Missing Variable
 
 ![TerminalView](/assets/gifs/Ch4ViewFromTerminal.gif "Terminal view")
