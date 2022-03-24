@@ -1,3 +1,4 @@
+![CrossCompute Logo](https://crosscompute.com/images/CrossCompute-LogoBrand-Horizontal-20200420.svg "CrossCompute logo")
 # Tutorial 1: Getting Started
 
 ## Setting Up Your Environment
